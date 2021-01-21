@@ -93,9 +93,15 @@
 				<td id="plugin"></td>
 			</tr>
 			<tr>
-				<td><strong>Canvas Print</strong> <button onclick="clipboardCopy()" id="copy" class="btn btn-default btn-sm">Copy Text</button></td>
+				<td><strong>Canvas Print</strong> <button onclick="clipboardCopy()" id="copy" class="btn btn-primary btn-sm">Copy Text</button></td>
 				<td id="dd" style=" overflow: auto; overflow-wrap: anywhere;">
 					<textarea id="canvasPrint" rows="4" style="width: 100%;"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td><strong>Canvas Print</strong> <button onclick="compareCanvas()" id="compare" class="btn btn-primary btn-sm">Campare</button></td>
+				<td id="dd" style=" overflow: auto; overflow-wrap: anywhere;">
+					<textarea id="canvasPrintCompare" rows="4" style="width: 100%;"></textarea>
 				</td>
 			</tr>
 		</tbody>
@@ -151,6 +157,17 @@
 			copyText.setSelectionRange(0, 99999); /* For mobile devices */
 			window.document.execCommand("copy");
 			window.document.getElementById('copy').innerHTML = 'Copied!';
+		}
+
+		function compareCanvas() {
+			var canvas_a = window.document.getElementById('canvasPrint').value;
+			var canvas_b = window.document.getElementById('canvasPrintCompare').value;
+			var match = canvas_a.localeCompare(canvas_b);
+			if (match === 0) {
+				alert('These canvas are identical!');
+			} else {
+				alert('These canvas are not identical!');
+			}
 		}
 	</script>
 </body>
