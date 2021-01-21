@@ -13,11 +13,16 @@
 </head>
 
 <body>
-	<h1>Client JS Fingerprint Data Test</h1>
+	<nav class="navbar navbar-dark bg-primary">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Client JS Fingerprint Data Test</a>
+		</div>
+	</nav>
+
 	<table class="table">
 		<tbody>
 			<tr>
-				<td><strong>Fingerprint</strong></td>
+				<td style="width:18%;"><strong>Fingerprint</strong></td>
 				<td id="fingerprint"></td>
 			</tr>
 			<tr>
@@ -93,13 +98,15 @@
 				<td id="plugin"></td>
 			</tr>
 			<tr>
-				<td><strong>Canvas Print</strong> <button onclick="clipboardCopy()" id="copy" class="btn btn-primary btn-sm">Copy Text</button></td>
+				<td><strong>Canvas Print</strong> <button onclick="clipboardCopy()" id="copy"
+						class="btn btn-outline-primary btn-sm">Copy Text</button></td>
 				<td id="dd" style=" overflow: auto; overflow-wrap: anywhere;">
 					<textarea id="canvasPrint" rows="4" style="width: 100%;"></textarea>
 				</td>
 			</tr>
 			<tr>
-				<td><strong>Canvas Print</strong> <button onclick="compareCanvas()" id="compare" class="btn btn-primary btn-sm">Campare</button></td>
+				<td><strong>Canvas Print</strong> <button onclick="compareCanvas()" id="compare"
+						class="btn btn-outline-primary btn-sm">Campare</button></td>
 				<td id="dd" style=" overflow: auto; overflow-wrap: anywhere;">
 					<textarea id="canvasPrintCompare" rows="4" style="width: 100%;"></textarea>
 				</td>
