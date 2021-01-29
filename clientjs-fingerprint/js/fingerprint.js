@@ -42,6 +42,9 @@ var client = new ClientJS();
 		var plugin = client.getPlugins();
 		window.document.getElementById('plugin').innerHTML = plugin;
 
+		console.log('canvasPrint ::' + canvasPrint);
+		alert(canvasPrint);
+
 		function clipboardCopy() {
 			var copyText = window.document.getElementById('canvasPrint');
 			copyText.select();
