@@ -1,4 +1,5 @@
 var ip_address = "127.0.0.1:5000";
+//var ip_address = "sec.uniquemachine.org";
 //var ip_address = "aws.songli.us:5000";
 
 function populateFontList(fontArr) {
@@ -259,6 +260,7 @@ var Sender = function() {
           success : function(data) {
             console.log(data);
             data['finished'] = true;
+            clearInterval(window.timer);
             parent.postMessage(data,"http://" + ip_address);
           },
           error: function (xhr, ajaxOptions, thrownError) {

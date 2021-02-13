@@ -165,12 +165,12 @@ def features():
     result['fonts'] = fonts
     for feature in cross_feature_list:
         cross_hash += str(result[feature])
-        hash_object = hashlib.md5(str(result[feature]))
+        hash_object = hashlib.md5((str(result[feature])).encode('utf-8'))
 
-    hash_object = hashlib.md5(value_str)
+    hash_object = hashlib.md5(value_str.encode('utf-8'))
     single_hash = hash_object.hexdigest()
 
-    hash_object = hashlib.md5(cross_hash)
+    hash_object = hashlib.md5(cross_hash.encode('utf-8'))
     cross_hash = hash_object.hexdigest()
 
     feature_str += ',browser_fingerprint,computer_fingerprint_1'
@@ -179,8 +179,11 @@ def features():
     db = mysql.get_db()
     cursor = db.cursor()
     sql_str = "INSERT INTO features (" + feature_str + ") VALUES (" + value_str + ");"
-    cursor.execute(sql_str)
-    db.commit()
+    try:
+        cursor.execute(sql_str)
+        db.commit()
+    except Exception as e:
+        print(e)
 
     print (single_hash, cross_hash)
     return flask.jsonify({"single": single_hash, "cross": cross_hash})
