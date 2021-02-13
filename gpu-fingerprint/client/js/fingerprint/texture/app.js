@@ -199,7 +199,7 @@ var TextureTest = function(vertices, indices, texCoords, texture) {
   this.begin = function(canvas, cb) {
     this.canvas = canvas;
     this.cb = cb;
-    var root = './texture/'
+    var root = 'static/texture/'
     loadTextResource(root + 'shader.vs.glsl', function(vsErr, vsText, self) {
       if (vsErr) {
         alert('Fatal error getting vertex shader (see console)');

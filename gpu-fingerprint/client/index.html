@@ -25,9 +25,7 @@
 	<p class="text-primary">Timer: <span id="timer" class="badge badge-success"></span></p>
 	<hr>
 	<div class = "row">
-		<div class = "text-center" id="iframe-container" style="display: none;">
-		  <iframe src="./js/fingerprint/blank.html" width="1000" height="1800" frameBorder="0"  scrolling = "no" id="fingerprint-iframe"></iframe>
-		</div>
+
 	  </div>
 	  <div id = "fingerprint_result" class = "text-center hide" height="400">
 		<div class = "row">
@@ -40,6 +38,11 @@
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<script src="js/main.js"></script>
+	<script src="js/fingerprint_main.js"></script>
+	<script>
+		var mid = new SdidJS('127.0.0.1:5000');
+		var mid = new SdidJS();
+		mid.generate();
+	</script>
 </body>
 </html>

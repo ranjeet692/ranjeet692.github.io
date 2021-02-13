@@ -49,10 +49,10 @@
       //this.checkID();
       this.numberOfAssets = 0;
       this.numLoaded = 0;
-      susanName = './assets/Susan.json';
-      simpleName = './assets/simple.json';
-      colorName = './assets/color.png';
-      colorName1 = './assets/color2.png';
+      susanName = 'static/assets/Susan.json';
+      simpleName = 'static/assets/simple.json';
+      colorName = 'static/assets/color.png';
+      colorName1 = 'static/assets/color2.png';
       this.loadJSONResource(susanName, (function(_this) {
         return function(err, susanModel) {
           _this.susanModel = susanModel;

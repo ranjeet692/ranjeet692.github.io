@@ -240,7 +240,7 @@ var MoreLightTest = function(vertices, indices, texCoords, normals, texture) {
   this.begin = function(canvas, cb) {
     this.canvas = canvas;
     this.cb = cb;
-    var root = './moreLight/'
+    var root = 'static/moreLight/'
     loadTextResource(root + 'shader.vs.glsl', function(vsErr, vsText, self) {
       if (vsErr) {
         alert('Fatal error getting vertex shader (see console)');

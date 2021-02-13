@@ -1,6 +1,6 @@
 from flask_failsafe import failsafe
 import logging
-import logging.handlers import TimedRotatingFileHandler
+from logging.handlers import TimedRotatingFileHandler
 import os
 import time
 
@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 handler = TimedRotatingFileHandler(filename=log_file_name, when='M', interval=1, backupCount=5, encoding='utf-8', delay=False)
 
 #create formatter and add to handler
-formatter = Formatter(fmt)
+#formatter = Formatter(fmt)
 def create_app():
 	from uniquemachine_app import app
 	return app

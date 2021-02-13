@@ -4,22 +4,13 @@ import flask
 from flask_cors import CORS, cross_origin
 import json
 import hashlib
-from flaskext.mysql import MySQL
-from configparser import ConfigParser
 import re
 from os import path
+from flask import render_template
+
 
 root = "/home/sol315/server/uniquemachine/"
-config = ConfigParser()
-config.read('db.ini')
-
-mysql = MySQL()
 app = Flask(__name__)
-app.config['MYSQL_DATABASE_USER'] = config['mysql']['username']
-app.config['MYSQL_DATABASE_PASSWORD'] = config['mysql']['password']
-app.config['MYSQL_DATABASE_DB'] = 'uniquemachine'
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
-mysql.init_app(app)
 CORS(app)
 
 mask = []
@@ -31,31 +22,8 @@ with open("mac_mask.txt", 'r') as fm:
     mac_mask = json.loads(fm.read())
 
 @app.route("/")
-def hello():
-    return "Hello World!"
-
-@app.route('/details', methods=['POST'])
-def details():
-    res = {}
-    ID = request.get_json()["ID"]
-    db = mysql.get_db()
-    cursor = db.cursor()
-    sql_str = "SELECT * FROM features WHERE browser_fingerprint = '" + ID +"'"
-    cursor.execute(sql_str)
-    db.commit()
-    row = cursor.fetchone()
-    for i in range(len(row)):
-        value = row[i]
-        name = cursor.description[i][0]
-        res[name] = value
-
-    if 'fonts' in res:
-        fs = list(res['fonts'])
-        for i in range(len(mask)):
-            fs[i] = str(int(fs[i]) & mask[i] & mac_mask[i])
-        res['fonts'] = ''.join(fs)
-
-    return flask.jsonify(res)
+def fingerprint():
+    return render_template('index.html')
 
 @app.route('/features', methods=['POST'])
 def features():
@@ -104,12 +72,9 @@ def features():
     
 
     result = request.get_json()
-
     single_hash = "single"
     cross_hash = "cross"
 
-    #with open("fonts.txt", 'a') as f:
-        #f.write(result['fonts'] + '\n')
 
     fonts = list(result['fonts'])
 
@@ -137,15 +102,13 @@ def features():
             value = "NULL"
 
         feature_str += "," + feature
-#for gpu imgs
+
         if feature == "gpuImgs":
             value = ",".join('%s_%s' % (k,v) for k,v in value.items())
         else:
             value = str(value)
 
-#        if feature == "cpu_cores" and type(value) != 'int':
-#           value = -1
-#fix the bug for N/A for cpu_cores
+
         if feature == 'cpu_cores':
             value = int(value)
 
@@ -159,8 +122,6 @@ def features():
             value = value[1:]
         
         value_str += ",'" + str(value) + "'"
-        #print feature, hash_object.hexdigest()
-
 
     result['fonts'] = fonts
     for feature in cross_feature_list:
@@ -172,18 +133,6 @@ def features():
 
     hash_object = hashlib.md5(cross_hash.encode('utf-8'))
     cross_hash = hash_object.hexdigest()
-
-    feature_str += ',browser_fingerprint,computer_fingerprint_1'
-    value_str += ",'" + single_hash + "','" + cross_hash + "'"
-
-    db = mysql.get_db()
-    cursor = db.cursor()
-    sql_str = "INSERT INTO features (" + feature_str + ") VALUES (" + value_str + ");"
-    try:
-        cursor.execute(sql_str)
-        db.commit()
-    except Exception as e:
-        print(e)
 
     print (single_hash, cross_hash)
     return flask.jsonify({"single": single_hash, "cross": cross_hash})

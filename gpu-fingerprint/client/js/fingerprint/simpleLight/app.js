@@ -231,7 +231,7 @@ var SimpleLightTest = function(vertices, indices, texCoords, normals, texture) {
     this.canvas = canvas;
     this.cb = cb;
     this.level = level;
-    var root = './simpleLight/'
+    var root = 'static/simpleLight/'
     loadTextResource(root + 'shader.vs.glsl', function(vsErr, vsText, self) {
       if (vsErr) {
         alert('Fatal error getting vertex shader (see console)');
