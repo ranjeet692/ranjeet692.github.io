@@ -1,3 +1,0 @@
-Flask-Failsafe
-Flask-Cors
-Flask-Mysql
