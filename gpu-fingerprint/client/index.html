@@ -40,9 +40,10 @@
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 	<script src="js/fingerprint_main.js"></script>
 	<script>
-		var mid = new SdidJS('127.0.0.1:5000');
-		var mid = new SdidJS();
-		mid.generate();
+		var data = new SdidJS();
+		data.generate();
+		document.getElementById('computer_fingerprint').innerHTML = data.getMid();
+		document.getElementById('browser_fingerprint').innerHTML = data.getBid();
 	</script>
 </body>
 </html>
