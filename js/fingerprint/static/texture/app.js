@@ -199,14 +199,14 @@ var TextureTest = function(vertices, indices, texCoords, texture) {
   this.begin = function(canvas, cb) {
     this.canvas = canvas;
     this.cb = cb;
-    var root = 'static/texture/'
-    loadTextResource(root + 'shader.vs.glsl', function(vsErr, vsText, self) {
+    var root = 'static/assets/'
+    loadTextResource(root + 'shader_tex.vs.glsl', function(vsErr, vsText, self) {
       if (vsErr) {
         alert('Fatal error getting vertex shader (see console)');
         console.error(vsErr);
       } else {
         loadTextResource(
-            root + 'shader.fs.glsl', function(fsErr, fsText, self) {
+            root + 'shader_tex.fs.glsl', function(fsErr, fsText, self) {
               if (fsErr) {
                 alert('Fatal error getting fragment shader (see console)');
                 console.error(fsErr);

@@ -231,14 +231,14 @@ var SimpleLightTest = function(vertices, indices, texCoords, normals, texture) {
     this.canvas = canvas;
     this.cb = cb;
     this.level = level;
-    var root = 'static/simpleLight/'
-    loadTextResource(root + 'shader.vs.glsl', function(vsErr, vsText, self) {
+    var root = 'static/assets/'
+    loadTextResource(root + 'shader_slight.vs.glsl', function(vsErr, vsText, self) {
       if (vsErr) {
         alert('Fatal error getting vertex shader (see console)');
         console.error(vsErr);
       } else {
         loadTextResource(
-            root + 'shader.fs.glsl', function(fsErr, fsText, self) {
+            root + 'shader_slight.fs.glsl', function(fsErr, fsText, self) {
               if (fsErr) {
                 alert('Fatal error getting fragment shader (see console)');
                 console.error(fsErr);
