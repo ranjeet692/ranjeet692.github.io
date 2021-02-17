@@ -137,7 +137,7 @@ var Sender = function() {
     // Send pixels to server
     var pixels = ctx.getImageData(0, 0, w, h).data;
     var hashV = hash(pixels);
-    console.log("CTX: " + hashV);
+    //console.log("CTX: " + hashV);
 
     this.toServer(false, "None", "None", hashV, id, pixels);
     if (sumRGB(pixels) > 1.0) {
@@ -161,12 +161,12 @@ var Sender = function() {
       ven = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
       ren = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
     } else {
-      console.log("debugInfo is not accessable");
+      //console.log("debugInfo is not accessable");
       ven = 'No debug Info';
       ren = 'No debug Info';
     }
     var hash = pixels.hashCode();
-    //console.log("gl: " + hash);
+    ////console.log("gl: " + hash);
 
     this.toServer(WebGL, ven, ren, hash, id, pixels);
     if (sumRGB(pixels) > 1.0) {

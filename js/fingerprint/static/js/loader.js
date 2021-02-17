@@ -58,7 +58,7 @@
           _this.susanModel = susanModel;
           if (err) {
             alert('error getting susan model');
-            console.log(err);
+            //console.log(err);
           } else {
             _this.assetLoaded();
           }
@@ -70,7 +70,7 @@
           _this.simpleModel = simpleModel;
           if (err) {
             alert('error getting simpleModel');
-            console.log(err);
+            //console.log(err);
           } else {
             _this.assetLoaded();
           }
@@ -82,7 +82,7 @@
           _this.texture = texture;
           if (err) {
             alert('error getting color.png');
-            console.log(err);
+            //console.log(err);
           } else {
             _this.assetLoaded();
           }
@@ -94,7 +94,7 @@
           _this.texture1 = texture1;
           if (err) {
             alert('error getting colors.png');
-            console.log(err);
+            //console.log(err);
           } else {
             _this.assetLoaded();
           }

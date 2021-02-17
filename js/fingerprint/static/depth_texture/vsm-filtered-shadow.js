@@ -32,7 +32,7 @@ and how they are implemented on the GPU
         gl.getExt('OES_standard_derivatives');
       } catch (error1) {
         error = error1;
-        console.log(error);
+        //console.log(error);
         return;
       }
       cubeGeom = gl.drawable(meshes.cube);

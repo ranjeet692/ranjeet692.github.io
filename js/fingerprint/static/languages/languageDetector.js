@@ -51,7 +51,7 @@ sort of box
         return function(index) {
           var c, i, len, ref, text;
           if (index === _this.codes.length) {
-            console.log("Lang done");
+            //console.log("Lang done");
             sender.postLangsDetected(_this.results);
             return _this.cb();
           } else {

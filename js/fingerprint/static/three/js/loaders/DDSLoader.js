@@ -136,14 +136,14 @@ THREE.DDSLoader.parse = function ( buffer, loadMipmaps ) {
 
 	if ( header[ off_magic ] !== DDS_MAGIC ) {
 
-		console.error( 'THREE.DDSLoader.parse: Invalid magic number in DDS header.' );
+		//console.error( 'THREE.DDSLoader.parse: Invalid magic number in DDS header.' );
 		return dds;
 
 	}
 
 	if ( ! header[ off_pfFlags ] & DDPF_FOURCC ) {
 
-		console.error( 'THREE.DDSLoader.parse: Unsupported format, must contain a FourCC code.' );
+		//console.error( 'THREE.DDSLoader.parse: Unsupported format, must contain a FourCC code.' );
 		return dds;
 
 	}
@@ -194,7 +194,7 @@ THREE.DDSLoader.parse = function ( buffer, loadMipmaps ) {
 
 			} else {
 
-				console.error( 'THREE.DDSLoader.parse: Unsupported FourCC code ', int32ToFourCC( fourCC ) );
+				//console.error( 'THREE.DDSLoader.parse: Unsupported FourCC code ', int32ToFourCC( fourCC ) );
 				return dds;
 
 			}
@@ -219,7 +219,7 @@ THREE.DDSLoader.parse = function ( buffer, loadMipmaps ) {
 		! ( caps2 & DDSCAPS2_CUBEMAP_NEGATIVEZ )
 		) ) {
 
-		console.error( 'THREE.DDSLoader.parse: Incomplete cubemap faces' );
+		//console.error( 'THREE.DDSLoader.parse: Incomplete cubemap faces' );
 		return dds;
 
 	}

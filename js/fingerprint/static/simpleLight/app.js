@@ -53,15 +53,13 @@ var SimpleLightTest = function(vertices, indices, texCoords, normals, texture) {
 
       gl.compileShader(vertexShader);
       if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
-        console.error('ERROR compiling vertex shader!',
-                      gl.getShaderInfoLog(vertexShader));
+        //console.error('ERROR compiling vertex shader!', gl.getShaderInfoLog(vertexShader));
         return;
       }
 
       gl.compileShader(fragmentShader);
       if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
-        console.error('ERROR compiling fragment shader!',
-                      gl.getShaderInfoLog(fragmentShader));
+        //console.error('ERROR compiling fragment shader!', gl.getShaderInfoLog(fragmentShader));
         return;
       }
 
@@ -70,13 +68,12 @@ var SimpleLightTest = function(vertices, indices, texCoords, normals, texture) {
       gl.attachShader(program, fragmentShader);
       gl.linkProgram(program);
       if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-        console.error('ERROR linking program!', gl.getProgramInfoLog(program));
+        //console.error('ERROR linking program!', gl.getProgramInfoLog(program));
         return;
       }
       gl.validateProgram(program);
       if (!gl.getProgramParameter(program, gl.VALIDATE_STATUS)) {
-        console.error('ERROR validating program!',
-                      gl.getProgramInfoLog(program));
+        //console.error('ERROR validating program!', gl.getProgramInfoLog(program));
         return;
       }
 
@@ -235,13 +232,13 @@ var SimpleLightTest = function(vertices, indices, texCoords, normals, texture) {
     loadTextResource(root + 'shader_slight.vs.glsl', function(vsErr, vsText, self) {
       if (vsErr) {
         alert('Fatal error getting vertex shader (see console)');
-        console.error(vsErr);
+        //console.error(vsErr);
       } else {
         loadTextResource(
             root + 'shader_slight.fs.glsl', function(fsErr, fsText, self) {
               if (fsErr) {
                 alert('Fatal error getting fragment shader (see console)');
-                console.error(fsErr);
+                ////console.error(fsErr);
               } else {
                 self.children.push(new RunSimpleLight(vsText, fsText, 0, self));
                 self.childLoaded();

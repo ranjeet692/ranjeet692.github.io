@@ -460,7 +460,7 @@ THREE.Color.prototype = {
 
 			if ( parseFloat( string ) < 1 ) {
 
-				console.warn( 'THREE.Color: Alpha component of ' + style + ' will be ignored.' );
+				//console.warn( 'THREE.Color: Alpha component of ' + style + ' will be ignored.' );
 
 			}
 
@@ -572,7 +572,7 @@ THREE.Color.prototype = {
 			} else {
 
 				// unknown color
-				console.warn( 'THREE.Color: Unknown color ' + style );
+				//console.warn( 'THREE.Color: Unknown color ' + style );
 
 			}
 
@@ -1209,7 +1209,7 @@ THREE.Quaternion.prototype = {
 
 		if ( p !== undefined ) {
 
-			console.warn( 'THREE.Quaternion: .multiply() now only accepts one argument. Use .multiplyQuaternions( a, b ) instead.' );
+			//console.warn( 'THREE.Quaternion: .multiply() now only accepts one argument. Use .multiplyQuaternions( a, b ) instead.' );
 			return this.multiplyQuaternions( q, p );
 
 		}
@@ -1550,7 +1550,7 @@ THREE.Vector2.prototype = {
 
 		if ( w !== undefined ) {
 
-			console.warn( 'THREE.Vector2: .add() now only accepts one argument. Use .addVectors( a, b ) instead.' );
+			//console.warn( 'THREE.Vector2: .add() now only accepts one argument. Use .addVectors( a, b ) instead.' );
 			return this.addVectors( v, w );
 
 		}
@@ -1593,7 +1593,7 @@ THREE.Vector2.prototype = {
 
 		if ( w !== undefined ) {
 
-			console.warn( 'THREE.Vector2: .sub() now only accepts one argument. Use .subVectors( a, b ) instead.' );
+			//console.warn( 'THREE.Vector2: .sub() now only accepts one argument. Use .subVectors( a, b ) instead.' );
 			return this.subVectors( v, w );
 
 		}
@@ -2016,7 +2016,7 @@ THREE.Vector3.prototype = {
 
 		if ( w !== undefined ) {
 
-			console.warn( 'THREE.Vector3: .add() now only accepts one argument. Use .addVectors( a, b ) instead.' );
+			//console.warn( 'THREE.Vector3: .add() now only accepts one argument. Use .addVectors( a, b ) instead.' );
 			return this.addVectors( v, w );
 
 		}
@@ -2063,7 +2063,7 @@ THREE.Vector3.prototype = {
 
 		if ( w !== undefined ) {
 
-			console.warn( 'THREE.Vector3: .sub() now only accepts one argument. Use .subVectors( a, b ) instead.' );
+			//console.warn( 'THREE.Vector3: .sub() now only accepts one argument. Use .subVectors( a, b ) instead.' );
 			return this.subVectors( v, w );
 
 		}
@@ -2100,7 +2100,7 @@ THREE.Vector3.prototype = {
 
 		if ( w !== undefined ) {
 
-			console.warn( 'THREE.Vector3: .multiply() now only accepts one argument. Use .multiplyVectors( a, b ) instead.' );
+			//console.warn( 'THREE.Vector3: .multiply() now only accepts one argument. Use .multiplyVectors( a, b ) instead.' );
 			return this.multiplyVectors( v, w );
 
 		}
@@ -2151,7 +2151,7 @@ THREE.Vector3.prototype = {
 
 			if ( euler instanceof THREE.Euler === false ) {
 
-				console.error( 'THREE.Vector3: .applyEuler() now expects an Euler rotation rather than a Vector3 and order.' );
+				//console.error( 'THREE.Vector3: .applyEuler() now expects an Euler rotation rather than a Vector3 and order.' );
 
 			}
 
@@ -2473,7 +2473,7 @@ THREE.Vector3.prototype = {
 
 		if ( w !== undefined ) {
 
-			console.warn( 'THREE.Vector3: .cross() now only accepts one argument. Use .crossVectors( a, b ) instead.' );
+			//console.warn( 'THREE.Vector3: .cross() now only accepts one argument. Use .crossVectors( a, b ) instead.' );
 			return this.crossVectors( v, w );
 
 		}
@@ -2602,7 +2602,7 @@ THREE.Vector3.prototype = {
 
 		if ( typeof m === 'number' ) {
 
-			console.warn( 'THREE.Vector3: setFromMatrixColumn now expects ( matrix, index ).' );
+			//console.warn( 'THREE.Vector3: setFromMatrixColumn now expects ( matrix, index ).' );
 			var temp = m
 			m = index;
 			index = temp;
@@ -2786,7 +2786,7 @@ THREE.Vector4.prototype = {
 
 		if ( w !== undefined ) {
 
-			console.warn( 'THREE.Vector4: .add() now only accepts one argument. Use .addVectors( a, b ) instead.' );
+			//console.warn( 'THREE.Vector4: .add() now only accepts one argument. Use .addVectors( a, b ) instead.' );
 			return this.addVectors( v, w );
 
 		}
@@ -2837,7 +2837,7 @@ THREE.Vector4.prototype = {
 
 		if ( w !== undefined ) {
 
-			console.warn( 'THREE.Vector4: .sub() now only accepts one argument. Use .subVectors( a, b ) instead.' );
+			//console.warn( 'THREE.Vector4: .sub() now only accepts one argument. Use .subVectors( a, b ) instead.' );
 			return this.subVectors( v, w );
 
 		}
@@ -3508,7 +3508,7 @@ THREE.Euler.prototype = {
 
 		} else {
 
-			console.warn( 'THREE.Euler: .setFromRotationMatrix() given unsupported order: ' + order );
+			//console.warn( 'THREE.Euler: .setFromRotationMatrix() given unsupported order: ' + order );
 
 		}
 
@@ -4462,7 +4462,7 @@ THREE.Matrix3 = function () {
 
 	if ( arguments.length > 0 ) {
 
-		console.error( 'THREE.Matrix3: the constructor no longer reads arguments. use .set() instead.' );
+		//console.error( 'THREE.Matrix3: the constructor no longer reads arguments. use .set() instead.' );
 
 	}
 
@@ -4616,7 +4616,7 @@ THREE.Matrix3.prototype = {
 
 		if ( matrix instanceof THREE.Matrix4 ) {
 
-			console.error( "THREE.Matrix3.getInverse no longer takes a Matrix4 argument." );
+			//console.error( "THREE.Matrix3.getInverse no longer takes a Matrix4 argument." );
 
 		}
 
@@ -4643,7 +4643,7 @@ THREE.Matrix3.prototype = {
 
 			} else {
 
-				console.warn( msg );
+				//console.warn( msg );
 
 			}
 
@@ -4682,8 +4682,7 @@ THREE.Matrix3.prototype = {
 
 	flattenToArrayOffset: function ( array, offset ) {
 
-		console.warn( "THREE.Matrix3: .flattenToArrayOffset is deprecated " +
-				"- just use .toArray instead." );
+		//console.warn( "THREE.Matrix3: .flattenToArrayOffset is deprecated " +"- just use .toArray instead." );
 
 		return this.toArray( array, offset );
 
@@ -4774,7 +4773,7 @@ THREE.Matrix4 = function () {
 
 	if ( arguments.length > 0 ) {
 
-		console.error( 'THREE.Matrix4: the constructor no longer reads arguments. use .set() instead.' );
+		//console.error( 'THREE.Matrix4: the constructor no longer reads arguments. use .set() instead.' );
 
 	}
 
@@ -4899,7 +4898,7 @@ THREE.Matrix4.prototype = {
 
 		if ( euler instanceof THREE.Euler === false ) {
 
-			console.error( 'THREE.Matrix: .makeRotationFromEuler() now expects a Euler rotation rather than a Vector3 and order.' );
+			//console.error( 'THREE.Matrix: .makeRotationFromEuler() now expects a Euler rotation rather than a Vector3 and order.' );
 
 		}
 
@@ -5110,7 +5109,7 @@ THREE.Matrix4.prototype = {
 
 		if ( n !== undefined ) {
 
-			console.warn( 'THREE.Matrix4: .multiply() now only accepts one argument. Use .multiplyMatrices( a, b ) instead.' );
+			//console.warn( 'THREE.Matrix4: .multiply() now only accepts one argument. Use .multiplyMatrices( a, b ) instead.' );
 			return this.multiplyMatrices( m, n );
 
 		}
@@ -5314,8 +5313,7 @@ THREE.Matrix4.prototype = {
 
 	flattenToArrayOffset: function ( array, offset ) {
 
-		console.warn( "THREE.Matrix3: .flattenToArrayOffset is deprecated " +
-				"- just use .toArray instead." );
+		//console.warn( "THREE.Matrix3: .flattenToArrayOffset is deprecated " + "- just use .toArray instead." );
 
 		return this.toArray( array, offset );
 
@@ -5328,7 +5326,7 @@ THREE.Matrix4.prototype = {
 		return function getPosition() {
 
 			if ( v1 === undefined ) v1 = new THREE.Vector3();
-			console.warn( 'THREE.Matrix4: .getPosition() has been removed. Use Vector3.setFromMatrixPosition( matrix ) instead.' );
+			//console.warn( 'THREE.Matrix4: .getPosition() has been removed. Use Vector3.setFromMatrixPosition( matrix ) instead.' );
 
 			return v1.setFromMatrixColumn( this, 3 );
 
@@ -5376,7 +5374,7 @@ THREE.Matrix4.prototype = {
 
 			} else {
 
-				console.warn( msg );
+				//console.warn( msg );
 
 			}
 
@@ -7052,7 +7050,7 @@ THREE.Math = {
 
 	random16: function () {
 
-		console.warn( 'THREE.Math.random16() has been deprecated. Use Math.random() instead.' );
+		//console.warn( 'THREE.Math.random16() has been deprecated. Use Math.random() instead.' );
 		return Math.random();
 
 	},
@@ -8341,7 +8339,7 @@ THREE.Layers.prototype = {
 		Object.defineProperties( this.params, {
 			PointCloud: {
 				get: function () {
-					console.warn( 'THREE.Raycaster: params.PointCloud has been renamed to params.Points.' );
+					//console.warn( 'THREE.Raycaster: params.PointCloud has been renamed to params.Points.' );
 					return this.Points;
 				}
 			}
@@ -8405,7 +8403,7 @@ THREE.Layers.prototype = {
 
 			} else {
 
-				console.error( 'THREE.Raycaster: Unsupported camera type.' );
+				//console.error( 'THREE.Raycaster: Unsupported camera type.' );
 
 			}
 
@@ -8429,7 +8427,7 @@ THREE.Layers.prototype = {
 
 			if ( Array.isArray( objects ) === false ) {
 
-				console.warn( 'THREE.Raycaster.intersectObjects: objects is not an Array.' );
+				//console.warn( 'THREE.Raycaster.intersectObjects: objects is not an Array.' );
 				return intersects;
 
 			}
@@ -8741,7 +8739,7 @@ Object.assign( THREE.Object3D.prototype, THREE.EventDispatcher.prototype, {
 
 		if ( object === this ) {
 
-			console.error( "THREE.Object3D.add: object can't be added as a child of itself.", object );
+			//console.error( "THREE.Object3D.add: object can't be added as a child of itself.", object );
 			return this;
 
 		}
@@ -8761,7 +8759,7 @@ Object.assign( THREE.Object3D.prototype, THREE.EventDispatcher.prototype, {
 
 		} else {
 
-			console.error( "THREE.Object3D.add: object not an instance of THREE.Object3D.", object );
+			//console.error( "THREE.Object3D.add: object not an instance of THREE.Object3D.", object );
 
 		}
 
@@ -9318,7 +9316,7 @@ THREE.BufferAttribute.prototype = {
 
 			if ( color === undefined ) {
 
-				console.warn( 'THREE.BufferAttribute.copyColorsArray(): color is undefined', i );
+				//console.warn( 'THREE.BufferAttribute.copyColorsArray(): color is undefined', i );
 				color = new THREE.Color();
 
 			}
@@ -9361,7 +9359,7 @@ THREE.BufferAttribute.prototype = {
 
 			if ( vector === undefined ) {
 
-				console.warn( 'THREE.BufferAttribute.copyVector2sArray(): vector is undefined', i );
+				//console.warn( 'THREE.BufferAttribute.copyVector2sArray(): vector is undefined', i );
 				vector = new THREE.Vector2();
 
 			}
@@ -9385,7 +9383,7 @@ THREE.BufferAttribute.prototype = {
 
 			if ( vector === undefined ) {
 
-				console.warn( 'THREE.BufferAttribute.copyVector3sArray(): vector is undefined', i );
+				//console.warn( 'THREE.BufferAttribute.copyVector3sArray(): vector is undefined', i );
 				vector = new THREE.Vector3();
 
 			}
@@ -9410,7 +9408,7 @@ THREE.BufferAttribute.prototype = {
 
 			if ( vector === undefined ) {
 
-				console.warn( 'THREE.BufferAttribute.copyVector4sArray(): vector is undefined', i );
+				//console.warn( 'THREE.BufferAttribute.copyVector4sArray(): vector is undefined', i );
 				vector = new THREE.Vector4();
 
 			}
@@ -9597,7 +9595,7 @@ THREE.Float64Attribute = function ( array, itemSize ) {
 
 THREE.DynamicBufferAttribute = function ( array, itemSize ) {
 
-	console.warn( 'THREE.DynamicBufferAttribute has been removed. Use new THREE.BufferAttribute().setDynamic( true ) instead.' );
+	//console.warn( 'THREE.DynamicBufferAttribute has been removed. Use new THREE.BufferAttribute().setDynamic( true ) instead.' );
 	return new THREE.BufferAttribute( array, itemSize ).setDynamic( true );
 
 };
@@ -9772,7 +9770,7 @@ THREE.InterleavedBufferAttribute.prototype = {
 
 	get length() {
 
-		console.warn( 'THREE.BufferAttribute: .length has been deprecated. Please use .count.' );
+		//console.warn( 'THREE.BufferAttribute: .length has been deprecated. Please use .count.' );
 		return this.array.length;
 
 	},
@@ -10487,7 +10485,7 @@ Object.assign( THREE.Geometry.prototype, THREE.EventDispatcher.prototype, {
 
 	computeTangents: function () {
 
-		console.warn( 'THREE.Geometry: .computeTangents() has been removed.' );
+		//console.warn( 'THREE.Geometry: .computeTangents() has been removed.' );
 
 	},
 
@@ -10538,7 +10536,7 @@ Object.assign( THREE.Geometry.prototype, THREE.EventDispatcher.prototype, {
 
 		if ( geometry instanceof THREE.Geometry === false ) {
 
-			console.error( 'THREE.Geometry.merge(): geometry not an instance of THREE.Geometry.', geometry );
+			//console.error( 'THREE.Geometry.merge(): geometry not an instance of THREE.Geometry.', geometry );
 			return;
 
 		}
@@ -10648,7 +10646,7 @@ Object.assign( THREE.Geometry.prototype, THREE.EventDispatcher.prototype, {
 
 		if ( mesh instanceof THREE.Mesh === false ) {
 
-			console.error( 'THREE.Geometry.mergeMesh(): mesh not an instance of THREE.Mesh.', mesh );
+			//console.error( 'THREE.Geometry.mergeMesh(): mesh not an instance of THREE.Mesh.', mesh );
 			return;
 
 		}
@@ -10689,7 +10687,7 @@ Object.assign( THREE.Geometry.prototype, THREE.EventDispatcher.prototype, {
 
 			} else {
 
-				//console.log('Duplicate vertex found. ', i, ' could be using ', verticesMap[key]);
+				////console.log('Duplicate vertex found. ', i, ' could be using ', verticesMap[key]);
 				changes[ i ] = changes[ verticesMap[ key ] ];
 
 			}
@@ -11136,13 +11134,13 @@ Object.assign( THREE.DirectGeometry.prototype, THREE.EventDispatcher.prototype, 
 
 	computeFaceNormals: function () {
 
-		console.warn( 'THREE.DirectGeometry: computeFaceNormals() is not a method of this type of geometry.' );
+		//console.warn( 'THREE.DirectGeometry: computeFaceNormals() is not a method of this type of geometry.' );
 
 	},
 
 	computeVertexNormals: function () {
 
-		console.warn( 'THREE.DirectGeometry: computeVertexNormals() is not a method of this type of geometry.' );
+		//console.warn( 'THREE.DirectGeometry: computeVertexNormals() is not a method of this type of geometry.' );
 
 	},
 
@@ -11294,7 +11292,7 @@ Object.assign( THREE.DirectGeometry.prototype, THREE.EventDispatcher.prototype, 
 
 				} else {
 
-					console.warn( 'THREE.DirectGeometry.fromGeometry(): Undefined vertexUv ', i );
+					//console.warn( 'THREE.DirectGeometry.fromGeometry(): Undefined vertexUv ', i );
 
 					this.uvs.push( new THREE.Vector2(), new THREE.Vector2(), new THREE.Vector2() );
 
@@ -11312,7 +11310,7 @@ Object.assign( THREE.DirectGeometry.prototype, THREE.EventDispatcher.prototype, 
 
 				} else {
 
-					console.warn( 'THREE.DirectGeometry.fromGeometry(): Undefined vertexUv2 ', i );
+					//console.warn( 'THREE.DirectGeometry.fromGeometry(): Undefined vertexUv2 ', i );
 
 					this.uvs2.push( new THREE.Vector2(), new THREE.Vector2(), new THREE.Vector2() );
 
@@ -11422,7 +11420,7 @@ Object.assign( THREE.BufferGeometry.prototype, THREE.EventDispatcher.prototype, 
 
 		if ( attribute instanceof THREE.BufferAttribute === false && attribute instanceof THREE.InterleavedBufferAttribute === false ) {
 
-			console.warn( 'THREE.BufferGeometry: .addAttribute() now expects ( name, attribute ).' );
+			//console.warn( 'THREE.BufferGeometry: .addAttribute() now expects ( name, attribute ).' );
 
 			this.addAttribute( name, new THREE.BufferAttribute( arguments[ 1 ], arguments[ 2 ] ) );
 
@@ -11432,7 +11430,7 @@ Object.assign( THREE.BufferGeometry.prototype, THREE.EventDispatcher.prototype, 
 
 		if ( name === 'index' ) {
 
-			console.warn( 'THREE.BufferGeometry.addAttribute: Use .setIndex() for index attribute.' );
+			//console.warn( 'THREE.BufferGeometry.addAttribute: Use .setIndex() for index attribute.' );
 			this.setIndex( attribute );
 
 			return;
@@ -11654,7 +11652,7 @@ Object.assign( THREE.BufferGeometry.prototype, THREE.EventDispatcher.prototype, 
 
 	setFromObject: function ( object ) {
 
-		// console.log( 'THREE.BufferGeometry.setFromObject(). Converting', object, this );
+		// //console.log( 'THREE.BufferGeometry.setFromObject(). Converting', object, this );
 
 		var geometry = object.geometry;
 
@@ -11948,7 +11946,7 @@ Object.assign( THREE.BufferGeometry.prototype, THREE.EventDispatcher.prototype, 
 
 		if ( isNaN( this.boundingBox.min.x ) || isNaN( this.boundingBox.min.y ) || isNaN( this.boundingBox.min.z ) ) {
 
-			console.error( 'THREE.BufferGeometry.computeBoundingBox: Computed min/max have NaN values. The "position" attribute is likely to have NaN values.', this );
+			//console.error( 'THREE.BufferGeometry.computeBoundingBox: Computed min/max have NaN values. The "position" attribute is likely to have NaN values.', this );
 
 		}
 
@@ -11993,7 +11991,7 @@ Object.assign( THREE.BufferGeometry.prototype, THREE.EventDispatcher.prototype, 
 
 				if ( isNaN( this.boundingSphere.radius ) ) {
 
-					console.error( 'THREE.BufferGeometry.computeBoundingSphere(): Computed radius is NaN. The "position" attribute is likely to have NaN values.', this );
+					//console.error( 'THREE.BufferGeometry.computeBoundingSphere(): Computed radius is NaN. The "position" attribute is likely to have NaN values.', this );
 
 				}
 
@@ -12139,7 +12137,7 @@ Object.assign( THREE.BufferGeometry.prototype, THREE.EventDispatcher.prototype, 
 
 		if ( geometry instanceof THREE.BufferGeometry === false ) {
 
-			console.error( 'THREE.BufferGeometry.merge(): geometry not an instance of THREE.BufferGeometry.', geometry );
+			//console.error( 'THREE.BufferGeometry.merge(): geometry not an instance of THREE.BufferGeometry.', geometry );
 			return;
 
 		}
@@ -12198,7 +12196,7 @@ Object.assign( THREE.BufferGeometry.prototype, THREE.EventDispatcher.prototype, 
 
 		if ( this.index === null ) {
 
-			console.warn( 'THREE.BufferGeometry.toNonIndexed(): Geometry is already non-indexed.' );
+			//console.warn( 'THREE.BufferGeometry.toNonIndexed(): Geometry is already non-indexed.' );
 			return this;
 
 		}
@@ -12468,7 +12466,7 @@ THREE.Uniform = function ( value ) {
 
 	if ( typeof value === 'string' ) {
 
-		console.warn( 'THREE.Uniform: Type parameter is no longer needed.' );
+		//console.warn( 'THREE.Uniform: Type parameter is no longer needed.' );
 		value = arguments[ 1 ];
 
 	}
@@ -13401,7 +13399,7 @@ Object.assign( THREE.AnimationClip, {
 
 		if ( ! animation ) {
 
-			console.error( "  no animation in JSONLoader data" );
+			//console.error( "  no animation in JSONLoader data" );
 			return null;
 
 		}
@@ -14418,9 +14416,9 @@ THREE.AnimationObjectGroup.prototype = {
 
 			} else if ( objects[ index ] !== knownObject) {
 
-				console.error( "Different objects with the same UUID " +
-						"detected. Clean the caches or recreate your " +
-						"infrastructure when reloading scenes..." );
+				//console.error( "Different objects with the same UUID " +
+				//		"detected. Clean the caches or recreate your " +
+				//		"infrastructure when reloading scenes..." );
 
 			} // else the object is already where we want it to be
 
@@ -14910,7 +14908,7 @@ THREE.KeyframeTrack.prototype = {
 
 			}
 
-			console.warn( message );
+			//console.warn( message );
 			return;
 
 		}
@@ -15021,7 +15019,7 @@ THREE.KeyframeTrack.prototype = {
 		var valueSize = this.getValueSize();
 		if ( valueSize - Math.floor( valueSize ) !== 0 ) {
 
-			console.error( "invalid value size in track", this );
+			//console.error( "invalid value size in track", this );
 			valid = false;
 
 		}
@@ -15033,7 +15031,7 @@ THREE.KeyframeTrack.prototype = {
 
 		if( nKeys === 0 ) {
 
-			console.error( "track is empty", this );
+			//console.error( "track is empty", this );
 			valid = false;
 
 		}
@@ -15046,7 +15044,7 @@ THREE.KeyframeTrack.prototype = {
 
 			if ( typeof currTime === 'number' && isNaN( currTime ) ) {
 
-				console.error( "time is not a valid number", this, i, currTime );
+				//console.error( "time is not a valid number", this, i, currTime );
 				valid = false;
 				break;
 
@@ -15054,7 +15052,7 @@ THREE.KeyframeTrack.prototype = {
 
 			if( prevTime !== null && prevTime > currTime ) {
 
-				console.error( "out of order keys", this, i, currTime, prevTime );
+				//console.error( "out of order keys", this, i, currTime, prevTime );
 				valid = false;
 				break;
 
@@ -15074,7 +15072,7 @@ THREE.KeyframeTrack.prototype = {
 
 					if ( isNaN( value ) ) {
 
-						console.error( "value is not a valid number", this, i, value );
+						//console.error( "value is not a valid number", this, i, value );
 						valid = false;
 						break;
 
@@ -15371,7 +15369,7 @@ THREE.PropertyBinding.prototype = {
  		// ensure there is a value node
 		if ( ! targetObject ) {
 
-			console.error( "  trying to update node for track: " + this.path + " but it wasn't found." );
+			//console.error( "  trying to update node for track: " + this.path + " but it wasn't found." );
 			return;
 
 		}
@@ -15387,14 +15385,14 @@ THREE.PropertyBinding.prototype = {
 
 					if ( ! targetObject.material ) {
 
-						console.error( '  can not bind to material as node does not have a material', this );
+						//console.error( '  can not bind to material as node does not have a material', this );
 						return;
 
 					}
 
 					if ( ! targetObject.material.materials ) {
 
-						console.error( '  can not bind to material.materials as node.material does not have a materials array', this );
+						//console.error( '  can not bind to material.materials as node.material does not have a materials array', this );
 						return;
 
 					}
@@ -15407,7 +15405,7 @@ THREE.PropertyBinding.prototype = {
 
 					if ( ! targetObject.skeleton ) {
 
-						console.error( '  can not bind to bones as node does not have a skeleton', this );
+						//console.error( '  can not bind to bones as node does not have a skeleton', this );
 						return;
 
 					}
@@ -15435,7 +15433,7 @@ THREE.PropertyBinding.prototype = {
 
 					if ( targetObject[ objectName ] === undefined ) {
 
-						console.error( '  can not bind to objectName of node, undefined', this );
+						//console.error( '  can not bind to objectName of node, undefined', this );
 						return;
 
 					}
@@ -15449,7 +15447,7 @@ THREE.PropertyBinding.prototype = {
 
 				if ( targetObject[ objectIndex ] === undefined ) {
 
-					console.error( "  trying to bind to objectIndex of objectName, but is undefined:", this, targetObject );
+					//console.error( "  trying to bind to objectIndex of objectName, but is undefined:", this, targetObject );
 					return;
 
 				}
@@ -15467,8 +15465,7 @@ THREE.PropertyBinding.prototype = {
 
 			var nodeName = parsedPath.nodeName;
 
-			console.error( "  trying to update property for track: " + nodeName +
-					'.' + propertyName + " but it wasn't found.", targetObject );
+			//console.error( "  trying to update property for track: " + nodeName + '.' + propertyName + " but it wasn't found.", targetObject );
 			return;
 
 		}
@@ -15500,14 +15497,14 @@ THREE.PropertyBinding.prototype = {
 				// support resolving morphTarget names into indices.
 				if ( ! targetObject.geometry ) {
 
-					console.error( '  can not bind to morphTargetInfluences becasuse node does not have a geometry', this );
+					//console.error( '  can not bind to morphTargetInfluences becasuse node does not have a geometry', this );
 					return;
 
 				}
 
 				if ( ! targetObject.geometry.morphTargets ) {
 
-					console.error( '  can not bind to morphTargetInfluences becasuse node does not have a geometry.morphTargets', this );
+					//console.error( '  can not bind to morphTargetInfluences becasuse node does not have a geometry.morphTargets', this );
 					return;
 
 				}
@@ -16433,14 +16430,14 @@ THREE.Audio.prototype = Object.assign( Object.create( THREE.Object3D.prototype )
 
 		if ( this.isPlaying === true ) {
 
-			console.warn( 'THREE.Audio: Audio is already playing.' );
+			//console.warn( 'THREE.Audio: Audio is already playing.' );
 			return;
 
 		}
 
 		if ( this.hasPlaybackControl === false ) {
 
-			console.warn( 'THREE.Audio: this Audio has no playback control.' );
+			//console.warn( 'THREE.Audio: this Audio has no playback control.' );
 			return;
 
 		}
@@ -16465,7 +16462,7 @@ THREE.Audio.prototype = Object.assign( Object.create( THREE.Object3D.prototype )
 
 		if ( this.hasPlaybackControl === false ) {
 
-			console.warn( 'THREE.Audio: this Audio has no playback control.' );
+			//console.warn( 'THREE.Audio: this Audio has no playback control.' );
 			return;
 
 		}
@@ -16482,7 +16479,7 @@ THREE.Audio.prototype = Object.assign( Object.create( THREE.Object3D.prototype )
 
 		if ( this.hasPlaybackControl === false ) {
 
-			console.warn( 'THREE.Audio: this Audio has no playback control.' );
+			//console.warn( 'THREE.Audio: this Audio has no playback control.' );
 			return;
 
 		}
@@ -16585,7 +16582,7 @@ THREE.Audio.prototype = Object.assign( Object.create( THREE.Object3D.prototype )
 
 		if ( this.hasPlaybackControl === false ) {
 
-			console.warn( 'THREE.Audio: this Audio has no playback control.' );
+			//console.warn( 'THREE.Audio: this Audio has no playback control.' );
 			return;
 
 		}
@@ -16618,7 +16615,7 @@ THREE.Audio.prototype = Object.assign( Object.create( THREE.Object3D.prototype )
 
 		if ( this.hasPlaybackControl === false ) {
 
-			console.warn( 'THREE.Audio: this Audio has no playback control.' );
+			//console.warn( 'THREE.Audio: this Audio has no playback control.' );
 			return false;
 
 		}
@@ -16631,7 +16628,7 @@ THREE.Audio.prototype = Object.assign( Object.create( THREE.Object3D.prototype )
 
 		if ( this.hasPlaybackControl === false ) {
 
-			console.warn( 'THREE.Audio: this Audio has no playback control.' );
+			//console.warn( 'THREE.Audio: this Audio has no playback control.' );
 			return;
 
 		}
@@ -17938,7 +17935,7 @@ THREE.Cache = {
 
 		if ( this.enabled === false ) return;
 
-		// console.log( 'THREE.Cache', 'Adding key:', key );
+		// //console.log( 'THREE.Cache', 'Adding key:', key );
 
 		this.files[ key ] = file;
 
@@ -17948,7 +17945,7 @@ THREE.Cache = {
 
 		if ( this.enabled === false ) return;
 
-		// console.log( 'THREE.Cache', 'Checking key:', key );
+		// //console.log( 'THREE.Cache', 'Checking key:', key );
 
 		return this.files[ key ];
 
@@ -18110,7 +18107,7 @@ THREE.Loader.prototype = {
 						break;
 					case 'colorAmbient':
 					case 'mapAmbient':
-						console.warn( 'THREE.Loader.createMaterial:', name, 'is no longer supported.' );
+						//console.warn( 'THREE.Loader.createMaterial:', name, 'is no longer supported.' );
 						break;
 					case 'colorDiffuse':
 						json.color = color.fromArray( value ).getHex();
@@ -18222,7 +18219,7 @@ THREE.Loader.prototype = {
 						json.side = THREE.DoubleSide;
 						break;
 					case 'transparency':
-						console.warn( 'THREE.Loader.createMaterial: transparency has been renamed to opacity' );
+						//console.warn( 'THREE.Loader.createMaterial: transparency has been renamed to opacity' );
 						json.opacity = value;
 						break;
 					case 'depthTest':
@@ -18240,7 +18237,7 @@ THREE.Loader.prototype = {
 						if ( value === 'face' ) json.vertexColors = THREE.FaceColors;
 						break;
 					default:
-						console.error( 'THREE.Loader.createMaterial: Unsupported', name, value );
+						//console.error( 'THREE.Loader.createMaterial: Unsupported', name, value );
 						break;
 				}
 
@@ -18353,7 +18350,7 @@ Object.assign( THREE.XHRLoader.prototype, {
 				// Some browsers return HTTP Status 0 when using non-http protocol
 				// e.g. 'file://' or 'data://'. Handle as success.
 
-				console.warn( 'THREE.XHRLoader: HTTP Status 0 received.' );
+				//console.warn( 'THREE.XHRLoader: HTTP Status 0 received.' );
 
 				if ( onLoad ) onLoad( response );
 
@@ -18450,7 +18447,7 @@ Object.assign( THREE.FontLoader.prototype, {
 
 			} catch ( e ) {
 
-				console.warn( 'THREE.FontLoader: typeface.js support is being deprecated. Use typeface.json instead.' );
+				//console.warn( 'THREE.FontLoader: typeface.js support is being deprecated. Use typeface.json instead.' );
 				json = JSON.parse( text.substring( 65, text.length - 2 ) );
 
 			}
@@ -18543,7 +18540,7 @@ THREE.JSONLoader = function ( manager ) {
 
 	if ( typeof manager === 'boolean' ) {
 
-		console.warn( 'THREE.JSONLoader: showStatus parameter has been removed from constructor.' );
+		//console.warn( 'THREE.JSONLoader: showStatus parameter has been removed from constructor.' );
 		manager = undefined;
 
 	}
@@ -18577,14 +18574,14 @@ Object.assign( THREE.JSONLoader.prototype, {
 
 					if ( type.toLowerCase() === 'object' ) {
 
-						console.error( 'THREE.JSONLoader: ' + url + ' should be loaded with THREE.ObjectLoader instead.' );
+						//console.error( 'THREE.JSONLoader: ' + url + ' should be loaded with THREE.ObjectLoader instead.' );
 						return;
 
 					}
 
 					if ( type.toLowerCase() === 'scene' ) {
 
-						console.error( 'THREE.JSONLoader: ' + url + ' should be loaded with THREE.SceneLoader instead.' );
+						//console.error( 'THREE.JSONLoader: ' + url + ' should be loaded with THREE.SceneLoader instead.' );
 						return;
 
 					}
@@ -18701,7 +18698,7 @@ Object.assign( THREE.JSONLoader.prototype, {
 				hasFaceColor	     = isBitSet( type, 6 );
 				hasFaceVertexColor  = isBitSet( type, 7 );
 
-				// console.log("type", type, "bits", isQuad, hasMaterial, hasFaceVertexUv, hasFaceNormal, hasFaceVertexNormal, hasFaceColor, hasFaceVertexColor);
+				// //console.log("type", type, "bits", isQuad, hasMaterial, hasFaceVertexUv, hasFaceNormal, hasFaceVertexNormal, hasFaceColor, hasFaceVertexColor);
 
 				if ( isQuad ) {
 
@@ -18958,8 +18955,8 @@ Object.assign( THREE.JSONLoader.prototype, {
 
 			if ( geometry.bones && geometry.bones.length > 0 && ( geometry.skinWeights.length !== geometry.skinIndices.length || geometry.skinIndices.length !== geometry.vertices.length ) ) {
 
-				console.warn( 'When skinning, number of vertices (' + geometry.vertices.length + '), skinIndices (' +
-					geometry.skinIndices.length + '), and skinWeights (' + geometry.skinWeights.length + ') should match.' );
+				//console.warn( 'When skinning, number of vertices (' + geometry.vertices.length + '), skinIndices (' +
+				//	geometry.skinIndices.length + '), and skinWeights (' + geometry.skinWeights.length + ') should match.' );
 
 			}
 
@@ -18995,7 +18992,7 @@ Object.assign( THREE.JSONLoader.prototype, {
 
 			if ( json.morphColors !== undefined && json.morphColors.length > 0 ) {
 
-				console.warn( 'THREE.JSONLoader: "morphColors" no longer supported. Using them as face colors.' );
+				//console.warn( 'THREE.JSONLoader: "morphColors" no longer supported. Using them as face colors.' );
 
 				var faces = geometry.faces;
 				var morphColors = json.morphColors[ 0 ].colors;
@@ -19285,7 +19282,7 @@ Object.assign( THREE.MaterialLoader.prototype, {
 
 		if ( textures[ name ] === undefined ) {
 
-			console.warn( 'THREE.MaterialLoader: Undefined texture', name );
+			//console.warn( 'THREE.MaterialLoader: Undefined texture', name );
 
 		}
 
@@ -19658,7 +19655,7 @@ Object.assign( THREE.ObjectLoader.prototype, {
 
 					default:
 
-						console.warn( 'THREE.ObjectLoader: Unsupported geometry type "' + data.type + '"' );
+						//console.warn( 'THREE.ObjectLoader: Unsupported geometry type "' + data.type + '"' );
 
 						continue;
 
@@ -19761,7 +19758,7 @@ Object.assign( THREE.ObjectLoader.prototype, {
 
 			if ( typeof( value ) === 'number' ) return value;
 
-			console.warn( 'THREE.ObjectLoader.parseTexture: Constant should be in numeric form.', value );
+			//console.warn( 'THREE.ObjectLoader.parseTexture: Constant should be in numeric form.', value );
 
 			return THREE[ value ];
 
@@ -19777,13 +19774,13 @@ Object.assign( THREE.ObjectLoader.prototype, {
 
 				if ( data.image === undefined ) {
 
-					console.warn( 'THREE.ObjectLoader: No "image" specified for', data.uuid );
+					//console.warn( 'THREE.ObjectLoader: No "image" specified for', data.uuid );
 
 				}
 
 				if ( images[ data.image ] === undefined ) {
 
-					console.warn( 'THREE.ObjectLoader: Undefined image', data.image );
+					//console.warn( 'THREE.ObjectLoader: Undefined image', data.image );
 
 				}
 
@@ -19828,7 +19825,7 @@ Object.assign( THREE.ObjectLoader.prototype, {
 
 				if ( geometries[ name ] === undefined ) {
 
-					console.warn( 'THREE.ObjectLoader: Undefined geometry', name );
+					//console.warn( 'THREE.ObjectLoader: Undefined geometry', name );
 
 				}
 
@@ -19842,7 +19839,7 @@ Object.assign( THREE.ObjectLoader.prototype, {
 
 				if ( materials[ name ] === undefined ) {
 
-					console.warn( 'THREE.ObjectLoader: Undefined material', name );
+					//console.warn( 'THREE.ObjectLoader: Undefined material', name );
 
 				}
 
@@ -20456,7 +20453,7 @@ THREE.Material.prototype = {
 
 			if ( newValue === undefined ) {
 
-				console.warn( "THREE.Material: '" + key + "' parameter is undefined." );
+				//console.warn( "THREE.Material: '" + key + "' parameter is undefined." );
 				continue;
 
 			}
@@ -20465,7 +20462,7 @@ THREE.Material.prototype = {
 
 			if ( currentValue === undefined ) {
 
-				console.warn( "THREE." + this.type + ": '" + key + "' is not a property of this material." );
+				//console.warn( "THREE." + this.type + ": '" + key + "' is not a property of this material." );
 				continue;
 
 			}
@@ -21728,7 +21725,7 @@ THREE.ShaderMaterial = function ( parameters ) {
 
 		if ( parameters.attributes !== undefined ) {
 
-			console.error( 'THREE.ShaderMaterial: attributes should now be defined in THREE.BufferGeometry instead.' );
+			//console.error( 'THREE.ShaderMaterial: attributes should now be defined in THREE.BufferGeometry instead.' );
 
 		}
 
@@ -22496,7 +22493,7 @@ THREE.Line = function ( geometry, material, mode ) {
 
 	if ( mode === 1 ) {
 
-		console.warn( 'THREE.Line: parameter THREE.LinePieces no longer supported. Created THREE.LineSegments instead.' );
+		////console.warn( 'THREE.Line: parameter THREE.LinePieces no longer supported. Created THREE.LineSegments instead.' );
 		return new THREE.LineSegments( geometry, material );
 
 	}
@@ -22762,7 +22759,7 @@ THREE.Mesh.prototype = Object.assign( Object.create( THREE.Object3D.prototype ),
 
 		}
 
-		console.warn( 'THREE.Mesh.getMorphTargetIndexByName: morph target ' + name + ' does not exist. Returning 0.' );
+		////console.warn( 'THREE.Mesh.getMorphTargetIndexByName: morph target ' + name + ' does not exist. Returning 0.' );
 
 		return 0;
 
@@ -23143,7 +23140,7 @@ THREE.Skeleton = function ( bones, boneInverses, useVertexTexture ) {
 
 		} else {
 
-			console.warn( 'THREE.Skeleton bonInverses is the wrong length.' );
+			////console.warn( 'THREE.Skeleton bonInverses is the wrong length.' );
 
 			this.boneInverses = [];
 
@@ -23431,7 +23428,7 @@ THREE.SkinnedMesh.prototype = Object.assign( Object.create( THREE.Mesh.prototype
 
 		} else {
 
-			console.warn( 'THREE.SkinnedMesh unrecognized bindMode: ' + this.bindMode );
+			////console.warn( 'THREE.SkinnedMesh unrecognized bindMode: ' + this.bindMode );
 
 		}
 
@@ -24758,7 +24755,7 @@ THREE.ShaderLib[ 'physical' ] = {
 
 THREE.WebGLRenderer = function ( parameters , useExtensions) {
 	var _useExtensions = typeof useExtensions !== 'undefined' ?  useExtensions : true;
-	//console.log( 'THREE.WebGLRenderer', THREE.REVISION );
+	////console.log( 'THREE.WebGLRenderer', THREE.REVISION );
 
 	parameters = parameters || {};
 
@@ -24975,7 +24972,7 @@ THREE.WebGLRenderer = function ( parameters , useExtensions) {
 
 	} catch ( error ) {
 
-		console.error( 'THREE.WebGLRenderer: ' + error );
+		//console.error( 'THREE.WebGLRenderer: ' + error );
 
 	}
 
@@ -25628,7 +25625,7 @@ THREE.WebGLRenderer = function ( parameters , useExtensions) {
 
 			if ( extension === null ) {
 
-				console.error( 'THREE.WebGLRenderer.setupVertexAttributes: using THREE.InstancedBufferGeometry but hardware does not support extension ANGLE_instanced_arrays.' );
+				//console.error( 'THREE.WebGLRenderer.setupVertexAttributes: using THREE.InstancedBufferGeometry but hardware does not support extension ANGLE_instanced_arrays.' );
 				return;
 
 			}
@@ -25665,7 +25662,7 @@ THREE.WebGLRenderer = function ( parameters , useExtensions) {
 
 					} else if ( array instanceof Float64Array ) {
 
-						console.warn("Unsupported data buffer format: Float64Array");
+						//console.warn("Unsupported data buffer format: Float64Array");
 
 					} else if ( array instanceof Uint16Array ) {
 
@@ -25835,7 +25832,7 @@ THREE.WebGLRenderer = function ( parameters , useExtensions) {
 
 		if ( camera instanceof THREE.Camera === false ) {
 
-			console.error( 'THREE.WebGLRenderer.render: camera is not an instance of THREE.Camera.' );
+			//console.error( 'THREE.WebGLRenderer.render: camera is not an instance of THREE.Camera.' );
 			return;
 
 		}
@@ -27174,7 +27171,7 @@ THREE.WebGLRenderer = function ( parameters , useExtensions) {
 
 		if ( textureUnit >= capabilities.maxTextures ) {
 
-			console.warn( 'WebGLRenderer: trying to use ' + textureUnit + ' texture units while this GPU supports only ' + capabilities.maxTextures );
+			//console.warn( 'WebGLRenderer: trying to use ' + textureUnit + ' texture units while this GPU supports only ' + capabilities.maxTextures );
 
 		}
 
@@ -27198,7 +27195,7 @@ THREE.WebGLRenderer = function ( parameters , useExtensions) {
 
 				if ( ! warned ) {
 
-					console.warn( "THREE.WebGLRenderer.setTexture2D: don't use render targets as textures. Use their .texture property instead." );
+					//console.warn( "THREE.WebGLRenderer.setTexture2D: don't use render targets as textures. Use their .texture property instead." );
 					warned = true;
 
 				}
@@ -27221,7 +27218,7 @@ THREE.WebGLRenderer = function ( parameters , useExtensions) {
 
 			if ( ! warned ) {
 
-				console.warn( "THREE.WebGLRenderer: .setTexture is deprecated, use setTexture2D instead." );
+				//console.warn( "THREE.WebGLRenderer: .setTexture is deprecated, use setTexture2D instead." );
 				warned = true;
 
 			}
@@ -27243,7 +27240,7 @@ THREE.WebGLRenderer = function ( parameters , useExtensions) {
 
 				if ( ! warned ) {
 
-					console.warn( "THREE.WebGLRenderer.setTextureCube: don't use cube render targets as textures. Use their .texture property instead." );
+					//console.warn( "THREE.WebGLRenderer.setTextureCube: don't use cube render targets as textures. Use their .texture property instead." );
 					warned = true;
 
 				}
@@ -27348,7 +27345,7 @@ THREE.WebGLRenderer = function ( parameters , useExtensions) {
 
 		if ( renderTarget instanceof THREE.WebGLRenderTarget === false ) {
 
-			console.error( 'THREE.WebGLRenderer.readRenderTargetPixels: renderTarget is not THREE.WebGLRenderTarget.' );
+			//console.error( 'THREE.WebGLRenderer.readRenderTargetPixels: renderTarget is not THREE.WebGLRenderTarget.' );
 			return;
 
 		}
@@ -27373,7 +27370,7 @@ THREE.WebGLRenderer = function ( parameters , useExtensions) {
 
 				if ( texture.format !== THREE.RGBAFormat && paramThreeToGL( texture.format ) !== _gl.getParameter( _gl.IMPLEMENTATION_COLOR_READ_FORMAT ) ) {
 
-					console.error( 'THREE.WebGLRenderer.readRenderTargetPixels: renderTarget is not in RGBA or implementation defined format.' );
+					//console.error( 'THREE.WebGLRenderer.readRenderTargetPixels: renderTarget is not in RGBA or implementation defined format.' );
 					return;
 
 				}
@@ -27383,7 +27380,7 @@ THREE.WebGLRenderer = function ( parameters , useExtensions) {
 				     ! ( texture.type === THREE.FloatType && extensions.get( 'WEBGL_color_buffer_float' ) ) &&
 				     ! ( texture.type === THREE.HalfFloatType && extensions.get( 'EXT_color_buffer_half_float' ) ) ) {
 
-					console.error( 'THREE.WebGLRenderer.readRenderTargetPixels: renderTarget is not in UnsignedByteType or implementation defined type.' );
+					//console.error( 'THREE.WebGLRenderer.readRenderTargetPixels: renderTarget is not in UnsignedByteType or implementation defined type.' );
 					return;
 
 				}
@@ -27400,7 +27397,7 @@ THREE.WebGLRenderer = function ( parameters , useExtensions) {
 
 				} else {
 
-					console.error( 'THREE.WebGLRenderer.readRenderTargetPixels: readPixels from renderTarget failed. Framebuffer not complete.' );
+					//console.error( 'THREE.WebGLRenderer.readRenderTargetPixels: readPixels from renderTarget failed. Framebuffer not complete.' );
 
 				}
 
@@ -27661,7 +27658,7 @@ THREE.WebGLBufferRenderer = function ( _gl, extensions, _infoRender ) {
 
 		if ( extension === null ) {
 
-			console.error( 'THREE.WebGLBufferRenderer: using THREE.InstancedBufferGeometry but hardware does not support extension ANGLE_instanced_arrays.' );
+			//console.error( 'THREE.WebGLBufferRenderer: using THREE.InstancedBufferGeometry but hardware does not support extension ANGLE_instanced_arrays.' );
 			return;
 
 		}
@@ -27901,7 +27898,7 @@ THREE.WebGLIndexedBufferRenderer = function ( _gl, extensions, _infoRender ) {
 
 		if ( extension === null ) {
 
-			console.error( 'THREE.WebGLBufferRenderer: using THREE.InstancedBufferGeometry but hardware does not support extension ANGLE_instanced_arrays.' );
+			//console.error( 'THREE.WebGLBufferRenderer: using THREE.InstancedBufferGeometry but hardware does not support extension ANGLE_instanced_arrays.' );
 			return;
 
 		}
@@ -28061,7 +28058,7 @@ THREE.WebGLCapabilities = function ( gl, extensions, parameters ) {
 
 	if ( _maxPrecision !== this.precision ) {
 
-		console.warn( 'THREE.WebGLRenderer:', this.precision, 'not supported, using', _maxPrecision, 'instead.' );
+		//console.warn( 'THREE.WebGLRenderer:', this.precision, 'not supported, using', _maxPrecision, 'instead.' );
 		this.precision = _maxPrecision;
 
 	}
@@ -28405,7 +28402,7 @@ THREE.WebGLObjects = function ( gl, properties, info ) {
 
 		} else if ( data.updateRange.count === 0 ) {
 
-			console.error( 'THREE.WebGLObjects.updateBuffer: dynamic THREE.BufferAttribute marked as needsUpdate but updateRange.count is 0, ensure you are using set methods or updating manually.' );
+			//console.error( 'THREE.WebGLObjects.updateBuffer: dynamic THREE.BufferAttribute marked as needsUpdate but updateRange.count is 0, ensure you are using set methods or updating manually.' );
 
 		} else {
 
@@ -28448,7 +28445,7 @@ THREE.WebGLObjects = function ( gl, properties, info ) {
 		var attributes = geometry.attributes;
 		var position = attributes.position;
 
-		// console.time( 'wireframe' );
+		// //console.time( 'wireframe' );
 
 		if ( index !== null ) {
 
@@ -28483,7 +28480,7 @@ THREE.WebGLObjects = function ( gl, properties, info ) {
 
 		}
 
-		// console.timeEnd( 'wireframe' );
+		// //console.timeEnd( 'wireframe' );
 
 		var TypeArray = position.count > 65535 ? Uint32Array : Uint16Array;
 		var attribute = new THREE.BufferAttribute( new TypeArray( indices ), 1 );
@@ -28651,7 +28648,7 @@ THREE.WebGLProgram = ( function () {
 			var info = gl.getActiveAttrib( program, i );
 			var name = info.name;
 
-			// console.log("THREE.WebGLProgram: ACTIVE VERTEX ATTRIBUTE:", name, i );
+			// //console.log("THREE.WebGLProgram: ACTIVE VERTEX ATTRIBUTE:", name, i );
 
 			attributes[ name ] = gl.getAttribLocation( program, name );
 
@@ -28801,7 +28798,7 @@ THREE.WebGLProgram = ( function () {
 
 		var gammaFactorDefine = ( renderer.gammaFactor > 0 ) ? renderer.gammaFactor : 1.0;
 
-		// console.log( 'building new program ' );
+		// //console.log( 'building new program ' );
 
 		//
 
@@ -29062,11 +29059,11 @@ THREE.WebGLProgram = ( function () {
 
 			runnable = false;
 
-			console.error( 'THREE.WebGLProgram: shader error: ', gl.getError(), 'gl.VALIDATE_STATUS', gl.getProgramParameter( program, gl.VALIDATE_STATUS ), 'gl.getProgramInfoLog', programLog, vertexLog, fragmentLog );
+			//console.error( 'THREE.WebGLProgram: shader error: ', gl.getError(), 'gl.VALIDATE_STATUS', gl.getProgramParameter( program, gl.VALIDATE_STATUS ), 'gl.getProgramInfoLog', programLog, vertexLog, fragmentLog );
 
 		} else if ( programLog !== '' ) {
 
-			console.warn( 'THREE.WebGLProgram: gl.getProgramInfoLog()', programLog );
+			//console.warn( 'THREE.WebGLProgram: gl.getProgramInfoLog()', programLog );
 
 		} else if ( vertexLog === '' || fragmentLog === '' ) {
 
@@ -29155,7 +29152,7 @@ THREE.WebGLProgram = ( function () {
 			uniforms: {
 				get: function() {
 
-					console.warn( 'THREE.WebGLProgram: .uniforms is now .getUniforms().' );
+					//console.warn( 'THREE.WebGLProgram: .uniforms is now .getUniforms().' );
 					return this.getUniforms();
 
 				}
@@ -29164,7 +29161,7 @@ THREE.WebGLProgram = ( function () {
 			attributes: {
 				get: function() {
 
-					console.warn( 'THREE.WebGLProgram: .attributes is now .getAttributes().' );
+					//console.warn( 'THREE.WebGLProgram: .attributes is now .getAttributes().' );
 					return this.getAttributes();
 
 				}
@@ -29247,7 +29244,7 @@ THREE.WebGLPrograms = function ( renderer, capabilities ) {
 
 				if ( maxBones < object.skeleton.bones.length ) {
 
-					console.warn( 'WebGLRenderer: too many bones - ' + object.skeleton.bones.length + ', this GPU supports just ' + maxBones + ' (try OpenGL instead of ANGLE)' );
+					//console.warn( 'WebGLRenderer: too many bones - ' + object.skeleton.bones.length + ', this GPU supports just ' + maxBones + ' (try OpenGL instead of ANGLE)' );
 
 				}
 
@@ -29273,7 +29270,7 @@ THREE.WebGLPrograms = function ( renderer, capabilities ) {
 
 		} else if ( map instanceof THREE.WebGLRenderTarget ) {
 
-			console.warn( "THREE.WebGLPrograms.getTextureEncodingFromMap: don't use render targets as textures. Use their .texture property instead." );
+			//console.warn( "THREE.WebGLPrograms.getTextureEncodingFromMap: don't use render targets as textures. Use their .texture property instead." );
 			encoding = map.texture.encoding;
 
 		}
@@ -29305,7 +29302,7 @@ THREE.WebGLPrograms = function ( renderer, capabilities ) {
 
 			if ( precision !== material.precision ) {
 
-				console.warn( 'THREE.WebGLProgram.getParameters:', material.precision, 'not supported, using', precision, 'instead.' );
+				//console.warn( 'THREE.WebGLProgram.getParameters:', material.precision, 'not supported, using', precision, 'instead.' );
 
 			}
 
@@ -29542,13 +29539,13 @@ THREE.WebGLShader = ( function () {
 
 		if ( gl.getShaderParameter( shader, gl.COMPILE_STATUS ) === false ) {
 
-			console.error( 'THREE.WebGLShader: Shader couldn\'t compile.' );
+			//console.error( 'THREE.WebGLShader: Shader couldn\'t compile.' );
 
 		}
 
 		if ( gl.getShaderInfoLog( shader ) !== '' ) {
 
-			console.warn( 'THREE.WebGLShader: gl.getShaderInfoLog()', type === gl.VERTEX_SHADER ? 'vertex' : 'fragment', gl.getShaderInfoLog( shader ), addLineNumbers( string ) );
+			//console.warn( 'THREE.WebGLShader: gl.getShaderInfoLog()', type === gl.VERTEX_SHADER ? 'vertex' : 'fragment', gl.getShaderInfoLog( shader ), addLineNumbers( string ) );
 
 		}
 
@@ -29683,7 +29680,7 @@ THREE.WebGLShadowMap = function ( _renderer, _lights, _objects ) {
 
 			if ( shadow === undefined ) {
 
-				console.warn( 'THREE.WebGLShadowMap:', light, 'has no shadow.' );
+				//console.warn( 'THREE.WebGLShadowMap:', light, 'has no shadow.' );
 				continue;
 
 			}
@@ -30537,7 +30534,7 @@ THREE.WebGLState = function ( gl, extensions, paramThreeToGL ) {
 
 		} catch ( error ) {
 
-			console.error( error );
+			//console.error( error );
 
 		}
 
@@ -30551,7 +30548,7 @@ THREE.WebGLState = function ( gl, extensions, paramThreeToGL ) {
 
 		} catch ( error ) {
 
-			console.error( error );
+			//console.error( error );
 
 		}
 
@@ -30946,7 +30943,7 @@ THREE.WebGLTextures = function ( _gl, extensions, state, properties, capabilitie
 			var context = canvas.getContext( '2d' );
 			context.drawImage( image, 0, 0, image.width, image.height, 0, 0, canvas.width, canvas.height );
 
-			console.warn( 'THREE.WebGLRenderer: image is too big (' + image.width + 'x' + image.height + '). Resized to ' + canvas.width + 'x' + canvas.height, image );
+			//console.warn( 'THREE.WebGLRenderer: image is too big (' + image.width + 'x' + image.height + '). Resized to ' + canvas.width + 'x' + canvas.height, image );
 
 			return canvas;
 
@@ -30973,7 +30970,7 @@ THREE.WebGLTextures = function ( _gl, extensions, state, properties, capabilitie
 			var context = canvas.getContext( '2d' );
 			context.drawImage( image, 0, 0, canvas.width, canvas.height );
 
-			console.warn( 'THREE.WebGLRenderer: image is not power of two (' + image.width + 'x' + image.height + '). Resized to ' + canvas.width + 'x' + canvas.height, image );
+			//console.warn( 'THREE.WebGLRenderer: image is not power of two (' + image.width + 'x' + image.height + '). Resized to ' + canvas.width + 'x' + canvas.height, image );
 
 			return canvas;
 
@@ -31114,11 +31111,11 @@ THREE.WebGLTextures = function ( _gl, extensions, state, properties, capabilitie
 
 			if ( image === undefined ) {
 
-				console.warn( 'THREE.WebGLRenderer: Texture marked for update but image is undefined', texture );
+				//console.warn( 'THREE.WebGLRenderer: Texture marked for update but image is undefined', texture );
 
 			} else if ( image.complete === false ) {
 
-				console.warn( 'THREE.WebGLRenderer: Texture marked for update but image is incomplete', texture );
+				//console.warn( 'THREE.WebGLRenderer: Texture marked for update but image is incomplete', texture );
 
 			} else {
 
@@ -31213,7 +31210,7 @@ THREE.WebGLTextures = function ( _gl, extensions, state, properties, capabilitie
 
 								} else {
 
-									console.warn( "THREE.WebGLRenderer: Attempt to load unsupported compressed texture format in .setTextureCube()" );
+									//console.warn( "THREE.WebGLRenderer: Attempt to load unsupported compressed texture format in .setTextureCube()" );
 
 								}
 
@@ -31276,7 +31273,7 @@ THREE.WebGLTextures = function ( _gl, extensions, state, properties, capabilitie
 
 			if ( texture.wrapS !== THREE.ClampToEdgeWrapping || texture.wrapT !== THREE.ClampToEdgeWrapping ) {
 
-				console.warn( 'THREE.WebGLRenderer: Texture is not power of two. Texture.wrapS and Texture.wrapT should be set to THREE.ClampToEdgeWrapping.', texture );
+				//console.warn( 'THREE.WebGLRenderer: Texture is not power of two. Texture.wrapS and Texture.wrapT should be set to THREE.ClampToEdgeWrapping.', texture );
 
 			}
 
@@ -31285,7 +31282,7 @@ THREE.WebGLTextures = function ( _gl, extensions, state, properties, capabilitie
 
 			if ( texture.minFilter !== THREE.NearestFilter && texture.minFilter !== THREE.LinearFilter ) {
 
-				console.warn( 'THREE.WebGLRenderer: Texture is not power of two. Texture.minFilter should be set to THREE.NearestFilter or THREE.LinearFilter.', texture );
+				//console.warn( 'THREE.WebGLRenderer: Texture is not power of two. Texture.minFilter should be set to THREE.NearestFilter or THREE.LinearFilter.', texture );
 
 			}
 
@@ -31403,7 +31400,7 @@ THREE.WebGLTextures = function ( _gl, extensions, state, properties, capabilitie
 
 					} else {
 
-						console.warn( "THREE.WebGLRenderer: Attempt to load unsupported compressed texture format in .uploadTexture()" );
+						//console.warn( "THREE.WebGLRenderer: Attempt to load unsupported compressed texture format in .uploadTexture()" );
 
 					}
 
@@ -33030,35 +33027,35 @@ THREE.SpritePlugin = function ( renderer, sprites ) {
 
 Object.assign( THREE, {
 	Face4: function ( a, b, c, d, normal, color, materialIndex ) {
-		console.warn( 'THREE.Face4 has been removed. A THREE.Face3 will be created instead.' );
+		//console.warn( 'THREE.Face4 has been removed. A THREE.Face3 will be created instead.' );
 		return new THREE.Face3( a, b, c, normal, color, materialIndex );
 	},
 	LineStrip: 0,
 	LinePieces: 1,
 	MeshFaceMaterial: THREE.MultiMaterial,
 	PointCloud: function ( geometry, material ) {
-		console.warn( 'THREE.PointCloud has been renamed to THREE.Points.' );
+		//console.warn( 'THREE.PointCloud has been renamed to THREE.Points.' );
 		return new THREE.Points( geometry, material );
 	},
 	Particle: THREE.Sprite,
 	ParticleSystem: function ( geometry, material ) {
-		console.warn( 'THREE.ParticleSystem has been renamed to THREE.Points.' );
+		//console.warn( 'THREE.ParticleSystem has been renamed to THREE.Points.' );
 		return new THREE.Points( geometry, material );
 	},
 	PointCloudMaterial: function ( parameters ) {
-		console.warn( 'THREE.PointCloudMaterial has been renamed to THREE.PointsMaterial.' );
+		//console.warn( 'THREE.PointCloudMaterial has been renamed to THREE.PointsMaterial.' );
 		return new THREE.PointsMaterial( parameters );
 	},
 	ParticleBasicMaterial: function ( parameters ) {
-		console.warn( 'THREE.ParticleBasicMaterial has been renamed to THREE.PointsMaterial.' );
+		//console.warn( 'THREE.ParticleBasicMaterial has been renamed to THREE.PointsMaterial.' );
 		return new THREE.PointsMaterial( parameters );
 	},
 	ParticleSystemMaterial: function ( parameters ) {
-		console.warn( 'THREE.ParticleSystemMaterial has been renamed to THREE.PointsMaterial.' );
+		//console.warn( 'THREE.ParticleSystemMaterial has been renamed to THREE.PointsMaterial.' );
 		return new THREE.PointsMaterial( parameters );
 	},
 	Vertex: function ( x, y, z ) {
-		console.warn( 'THREE.Vertex has been removed. Use THREE.Vector3 instead.' );
+		//console.warn( 'THREE.Vertex has been removed. Use THREE.Vector3 instead.' );
 		return new THREE.Vector3( x, y, z );
 	}
 } );
@@ -33067,133 +33064,133 @@ Object.assign( THREE, {
 
 Object.assign( THREE.Box2.prototype, {
 	empty: function () {
-		console.warn( 'THREE.Box2: .empty() has been renamed to .isEmpty().' );
+		//console.warn( 'THREE.Box2: .empty() has been renamed to .isEmpty().' );
 		return this.isEmpty();
 	},
 	isIntersectionBox: function ( box ) {
-		console.warn( 'THREE.Box2: .isIntersectionBox() has been renamed to .intersectsBox().' );
+		//console.warn( 'THREE.Box2: .isIntersectionBox() has been renamed to .intersectsBox().' );
 		return this.intersectsBox( box );
 	}
 } );
 
 Object.assign( THREE.Box3.prototype, {
 	empty: function () {
-		console.warn( 'THREE.Box3: .empty() has been renamed to .isEmpty().' );
+		//console.warn( 'THREE.Box3: .empty() has been renamed to .isEmpty().' );
 		return this.isEmpty();
 	},
 	isIntersectionBox: function ( box ) {
-		console.warn( 'THREE.Box3: .isIntersectionBox() has been renamed to .intersectsBox().' );
+		//console.warn( 'THREE.Box3: .isIntersectionBox() has been renamed to .intersectsBox().' );
 		return this.intersectsBox( box );
 	},
 	isIntersectionSphere: function ( sphere ) {
-		console.warn( 'THREE.Box3: .isIntersectionSphere() has been renamed to .intersectsSphere().' );
+		//console.warn( 'THREE.Box3: .isIntersectionSphere() has been renamed to .intersectsSphere().' );
 		return this.intersectsSphere( sphere );
 	}
 } );
 
 Object.assign( THREE.Matrix3.prototype, {
 	multiplyVector3: function ( vector ) {
-		console.warn( 'THREE.Matrix3: .multiplyVector3() has been removed. Use vector.applyMatrix3( matrix ) instead.' );
+		//console.warn( 'THREE.Matrix3: .multiplyVector3() has been removed. Use vector.applyMatrix3( matrix ) instead.' );
 		return vector.applyMatrix3( this );
 	},
 	multiplyVector3Array: function ( a ) {
-		console.warn( 'THREE.Matrix3: .multiplyVector3Array() has been renamed. Use matrix.applyToVector3Array( array ) instead.' );
+		//console.warn( 'THREE.Matrix3: .multiplyVector3Array() has been renamed. Use matrix.applyToVector3Array( array ) instead.' );
 		return this.applyToVector3Array( a );
 	}
 } );
 
 Object.assign( THREE.Matrix4.prototype, {
 	extractPosition: function ( m ) {
-		console.warn( 'THREE.Matrix4: .extractPosition() has been renamed to .copyPosition().' );
+		//console.warn( 'THREE.Matrix4: .extractPosition() has been renamed to .copyPosition().' );
 		return this.copyPosition( m );
 	},
 	setRotationFromQuaternion: function ( q ) {
-		console.warn( 'THREE.Matrix4: .setRotationFromQuaternion() has been renamed to .makeRotationFromQuaternion().' );
+		//console.warn( 'THREE.Matrix4: .setRotationFromQuaternion() has been renamed to .makeRotationFromQuaternion().' );
 		return this.makeRotationFromQuaternion( q );
 	},
 	multiplyVector3: function ( vector ) {
-		console.warn( 'THREE.Matrix4: .multiplyVector3() has been removed. Use vector.applyMatrix4( matrix ) or vector.applyProjection( matrix ) instead.' );
+		//console.warn( 'THREE.Matrix4: .multiplyVector3() has been removed. Use vector.applyMatrix4( matrix ) or vector.applyProjection( matrix ) instead.' );
 		return vector.applyProjection( this );
 	},
 	multiplyVector4: function ( vector ) {
-		console.warn( 'THREE.Matrix4: .multiplyVector4() has been removed. Use vector.applyMatrix4( matrix ) instead.' );
+		//console.warn( 'THREE.Matrix4: .multiplyVector4() has been removed. Use vector.applyMatrix4( matrix ) instead.' );
 		return vector.applyMatrix4( this );
 	},
 	multiplyVector3Array: function ( a ) {
-		console.warn( 'THREE.Matrix4: .multiplyVector3Array() has been renamed. Use matrix.applyToVector3Array( array ) instead.' );
+		//console.warn( 'THREE.Matrix4: .multiplyVector3Array() has been renamed. Use matrix.applyToVector3Array( array ) instead.' );
 		return this.applyToVector3Array( a );
 	},
 	rotateAxis: function ( v ) {
-		console.warn( 'THREE.Matrix4: .rotateAxis() has been removed. Use Vector3.transformDirection( matrix ) instead.' );
+		//console.warn( 'THREE.Matrix4: .rotateAxis() has been removed. Use Vector3.transformDirection( matrix ) instead.' );
 		v.transformDirection( this );
 	},
 	crossVector: function ( vector ) {
-		console.warn( 'THREE.Matrix4: .crossVector() has been removed. Use vector.applyMatrix4( matrix ) instead.' );
+		//console.warn( 'THREE.Matrix4: .crossVector() has been removed. Use vector.applyMatrix4( matrix ) instead.' );
 		return vector.applyMatrix4( this );
 	},
 	translate: function ( v ) {
-		console.error( 'THREE.Matrix4: .translate() has been removed.' );
+		//console.error( 'THREE.Matrix4: .translate() has been removed.' );
 	},
 	rotateX: function ( angle ) {
-		console.error( 'THREE.Matrix4: .rotateX() has been removed.' );
+		//console.error( 'THREE.Matrix4: .rotateX() has been removed.' );
 	},
 	rotateY: function ( angle ) {
-		console.error( 'THREE.Matrix4: .rotateY() has been removed.' );
+		//console.error( 'THREE.Matrix4: .rotateY() has been removed.' );
 	},
 	rotateZ: function ( angle ) {
-		console.error( 'THREE.Matrix4: .rotateZ() has been removed.' );
+		//console.error( 'THREE.Matrix4: .rotateZ() has been removed.' );
 	},
 	rotateByAxis: function ( axis, angle ) {
-		console.error( 'THREE.Matrix4: .rotateByAxis() has been removed.' );
+		//console.error( 'THREE.Matrix4: .rotateByAxis() has been removed.' );
 	}
 } );
 
 Object.assign( THREE.Plane.prototype, {
 	isIntersectionLine: function ( line ) {
-		console.warn( 'THREE.Plane: .isIntersectionLine() has been renamed to .intersectsLine().' );
+		//console.warn( 'THREE.Plane: .isIntersectionLine() has been renamed to .intersectsLine().' );
 		return this.intersectsLine( line );
 	}
 } );
 
 Object.assign( THREE.Quaternion.prototype, {
 	multiplyVector3: function ( vector ) {
-		console.warn( 'THREE.Quaternion: .multiplyVector3() has been removed. Use is now vector.applyQuaternion( quaternion ) instead.' );
+		//console.warn( 'THREE.Quaternion: .multiplyVector3() has been removed. Use is now vector.applyQuaternion( quaternion ) instead.' );
 		return vector.applyQuaternion( this );
 	}
 } );
 
 Object.assign( THREE.Ray.prototype, {
 	isIntersectionBox: function ( box ) {
-		console.warn( 'THREE.Ray: .isIntersectionBox() has been renamed to .intersectsBox().' );
+		//console.warn( 'THREE.Ray: .isIntersectionBox() has been renamed to .intersectsBox().' );
 		return this.intersectsBox( box );
 	},
 	isIntersectionPlane: function ( plane ) {
-		console.warn( 'THREE.Ray: .isIntersectionPlane() has been renamed to .intersectsPlane().' );
+		//console.warn( 'THREE.Ray: .isIntersectionPlane() has been renamed to .intersectsPlane().' );
 		return this.intersectsPlane( plane );
 	},
 	isIntersectionSphere: function ( sphere ) {
-		console.warn( 'THREE.Ray: .isIntersectionSphere() has been renamed to .intersectsSphere().' );
+		//console.warn( 'THREE.Ray: .isIntersectionSphere() has been renamed to .intersectsSphere().' );
 		return this.intersectsSphere( sphere );
 	}
 } );
 
 Object.assign( THREE.Vector3.prototype, {
 	setEulerFromRotationMatrix: function () {
-		console.error( 'THREE.Vector3: .setEulerFromRotationMatrix() has been removed. Use Euler.setFromRotationMatrix() instead.' );
+		//console.error( 'THREE.Vector3: .setEulerFromRotationMatrix() has been removed. Use Euler.setFromRotationMatrix() instead.' );
 	},
 	setEulerFromQuaternion: function () {
-		console.error( 'THREE.Vector3: .setEulerFromQuaternion() has been removed. Use Euler.setFromQuaternion() instead.' );
+		//console.error( 'THREE.Vector3: .setEulerFromQuaternion() has been removed. Use Euler.setFromQuaternion() instead.' );
 	},
 	getPositionFromMatrix: function ( m ) {
-		console.warn( 'THREE.Vector3: .getPositionFromMatrix() has been renamed to .setFromMatrixPosition().' );
+		//console.warn( 'THREE.Vector3: .getPositionFromMatrix() has been renamed to .setFromMatrixPosition().' );
 		return this.setFromMatrixPosition( m );
 	},
 	getScaleFromMatrix: function ( m ) {
-		console.warn( 'THREE.Vector3: .getScaleFromMatrix() has been renamed to .setFromMatrixScale().' );
+		//console.warn( 'THREE.Vector3: .getScaleFromMatrix() has been renamed to .setFromMatrixScale().' );
 		return this.setFromMatrixScale( m );
 	},
 	getColumnFromMatrix: function ( index, matrix ) {
-		console.warn( 'THREE.Vector3: .getColumnFromMatrix() has been renamed to .setFromMatrixColumn().' );
+		//console.warn( 'THREE.Vector3: .getColumnFromMatrix() has been renamed to .setFromMatrixColumn().' );
 		return this.setFromMatrixColumn( matrix, index );
 	}
 } );
@@ -33202,14 +33199,14 @@ Object.assign( THREE.Vector3.prototype, {
 
 Object.assign( THREE.Object3D.prototype, {
 	getChildByName: function ( name ) {
-		console.warn( 'THREE.Object3D: .getChildByName() has been renamed to .getObjectByName().' );
+		//console.warn( 'THREE.Object3D: .getChildByName() has been renamed to .getObjectByName().' );
 		return this.getObjectByName( name );
 	},
 	renderDepth: function ( value ) {
-		console.warn( 'THREE.Object3D: .renderDepth has been removed. Use .renderOrder, instead.' );
+		//console.warn( 'THREE.Object3D: .renderDepth has been removed. Use .renderOrder, instead.' );
 	},
 	translate: function ( distance, axis ) {
-		console.warn( 'THREE.Object3D: .translate() has been removed. Use .translateOnAxis( axis, distance ) instead.' );
+		//console.warn( 'THREE.Object3D: .translate() has been removed. Use .translateOnAxis( axis, distance ) instead.' );
 		return this.translateOnAxis( axis, distance );
 	}
 } );
@@ -33217,20 +33214,20 @@ Object.assign( THREE.Object3D.prototype, {
 Object.defineProperties( THREE.Object3D.prototype, {
 	eulerOrder: {
 		get: function () {
-			console.warn( 'THREE.Object3D: .eulerOrder is now .rotation.order.' );
+			//console.warn( 'THREE.Object3D: .eulerOrder is now .rotation.order.' );
 			return this.rotation.order;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.Object3D: .eulerOrder is now .rotation.order.' );
+			//console.warn( 'THREE.Object3D: .eulerOrder is now .rotation.order.' );
 			this.rotation.order = value;
 		}
 	},
 	useQuaternion: {
 		get: function () {
-			console.warn( 'THREE.Object3D: .useQuaternion has been removed. The library now uses quaternions by default.' );
+			//console.warn( 'THREE.Object3D: .useQuaternion has been removed. The library now uses quaternions by default.' );
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.Object3D: .useQuaternion has been removed. The library now uses quaternions by default.' );
+			//console.warn( 'THREE.Object3D: .useQuaternion has been removed. The library now uses quaternions by default.' );
 		}
 	}
 } );
@@ -33238,7 +33235,7 @@ Object.defineProperties( THREE.Object3D.prototype, {
 Object.defineProperties( THREE.LOD.prototype, {
 	objects: {
 		get: function () {
-			console.warn( 'THREE.LOD: .objects has been renamed to .levels.' );
+			//console.warn( 'THREE.LOD: .objects has been renamed to .levels.' );
 			return this.levels;
 		}
 	}
@@ -33248,8 +33245,7 @@ Object.defineProperties( THREE.LOD.prototype, {
 
 THREE.PerspectiveCamera.prototype.setLens = function ( focalLength, filmGauge ) {
 
-	console.warn( "THREE.PerspectiveCamera.setLens is deprecated. " +
-			"Use .setFocalLength and .filmGauge for a photographic setup." );
+	//console.warn( "THREE.PerspectiveCamera.setLens is deprecated. " + "Use .setFocalLength and .filmGauge for a photographic setup." );
 
 	if ( filmGauge !== undefined ) this.filmGauge = filmGauge;
 	this.setFocalLength( focalLength );
@@ -33261,76 +33257,76 @@ THREE.PerspectiveCamera.prototype.setLens = function ( focalLength, filmGauge ) 
 Object.defineProperties( THREE.Light.prototype, {
 	onlyShadow: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .onlyShadow has been removed.' );
+			//console.warn( 'THREE.Light: .onlyShadow has been removed.' );
 		}
 	},
 	shadowCameraFov: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .shadowCameraFov is now .shadow.camera.fov.' );
+			//console.warn( 'THREE.Light: .shadowCameraFov is now .shadow.camera.fov.' );
 			this.shadow.camera.fov = value;
 		}
 	},
 	shadowCameraLeft: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .shadowCameraLeft is now .shadow.camera.left.' );
+			//console.warn( 'THREE.Light: .shadowCameraLeft is now .shadow.camera.left.' );
 			this.shadow.camera.left = value;
 		}
 	},
 	shadowCameraRight: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .shadowCameraRight is now .shadow.camera.right.' );
+			//console.warn( 'THREE.Light: .shadowCameraRight is now .shadow.camera.right.' );
 			this.shadow.camera.right = value;
 		}
 	},
 	shadowCameraTop: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .shadowCameraTop is now .shadow.camera.top.' );
+			//console.warn( 'THREE.Light: .shadowCameraTop is now .shadow.camera.top.' );
 			this.shadow.camera.top = value;
 		}
 	},
 	shadowCameraBottom: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .shadowCameraBottom is now .shadow.camera.bottom.' );
+			//console.warn( 'THREE.Light: .shadowCameraBottom is now .shadow.camera.bottom.' );
 			this.shadow.camera.bottom = value;
 		}
 	},
 	shadowCameraNear: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .shadowCameraNear is now .shadow.camera.near.' );
+			//console.warn( 'THREE.Light: .shadowCameraNear is now .shadow.camera.near.' );
 			this.shadow.camera.near = value;
 		}
 	},
 	shadowCameraFar: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .shadowCameraFar is now .shadow.camera.far.' );
+			//console.warn( 'THREE.Light: .shadowCameraFar is now .shadow.camera.far.' );
 			this.shadow.camera.far = value;
 		}
 	},
 	shadowCameraVisible: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .shadowCameraVisible has been removed. Use new THREE.CameraHelper( light.shadow.camera ) instead.' );
+			//console.warn( 'THREE.Light: .shadowCameraVisible has been removed. Use new THREE.CameraHelper( light.shadow.camera ) instead.' );
 		}
 	},
 	shadowBias: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .shadowBias is now .shadow.bias.' );
+			//console.warn( 'THREE.Light: .shadowBias is now .shadow.bias.' );
 			this.shadow.bias = value;
 		}
 	},
 	shadowDarkness: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .shadowDarkness has been removed.' );
+			//console.warn( 'THREE.Light: .shadowDarkness has been removed.' );
 		}
 	},
 	shadowMapWidth: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .shadowMapWidth is now .shadow.mapSize.width.' );
+			//console.warn( 'THREE.Light: .shadowMapWidth is now .shadow.mapSize.width.' );
 			this.shadow.mapSize.width = value;
 		}
 	},
 	shadowMapHeight: {
 		set: function ( value ) {
-			console.warn( 'THREE.Light: .shadowMapHeight is now .shadow.mapSize.height.' );
+			//console.warn( 'THREE.Light: .shadowMapHeight is now .shadow.mapSize.height.' );
 			this.shadow.mapSize.height = value;
 		}
 	}
@@ -33341,7 +33337,7 @@ Object.defineProperties( THREE.Light.prototype, {
 Object.defineProperties( THREE.BufferAttribute.prototype, {
 	length: {
 		get: function () {
-			console.warn( 'THREE.BufferAttribute: .length has been deprecated. Please use .count.' );
+			//console.warn( 'THREE.BufferAttribute: .length has been deprecated. Please use .count.' );
 			return this.array.length;
 		}
 	}
@@ -33349,38 +33345,38 @@ Object.defineProperties( THREE.BufferAttribute.prototype, {
 
 Object.assign( THREE.BufferGeometry.prototype, {
 	addIndex: function ( index ) {
-		console.warn( 'THREE.BufferGeometry: .addIndex() has been renamed to .setIndex().' );
+		//console.warn( 'THREE.BufferGeometry: .addIndex() has been renamed to .setIndex().' );
 		this.setIndex( index );
 	},
 	addDrawCall: function ( start, count, indexOffset ) {
 		if ( indexOffset !== undefined ) {
-			console.warn( 'THREE.BufferGeometry: .addDrawCall() no longer supports indexOffset.' );
+			//console.warn( 'THREE.BufferGeometry: .addDrawCall() no longer supports indexOffset.' );
 		}
-		console.warn( 'THREE.BufferGeometry: .addDrawCall() is now .addGroup().' );
+		//console.warn( 'THREE.BufferGeometry: .addDrawCall() is now .addGroup().' );
 		this.addGroup( start, count );
 	},
 	clearDrawCalls: function () {
-		console.warn( 'THREE.BufferGeometry: .clearDrawCalls() is now .clearGroups().' );
+		//console.warn( 'THREE.BufferGeometry: .clearDrawCalls() is now .clearGroups().' );
 		this.clearGroups();
 	},
 	computeTangents: function () {
-		console.warn( 'THREE.BufferGeometry: .computeTangents() has been removed.' );
+		//console.warn( 'THREE.BufferGeometry: .computeTangents() has been removed.' );
 	},
 	computeOffsets: function () {
-		console.warn( 'THREE.BufferGeometry: .computeOffsets() has been removed.' );
+		//console.warn( 'THREE.BufferGeometry: .computeOffsets() has been removed.' );
 	}
 } );
 
 Object.defineProperties( THREE.BufferGeometry.prototype, {
 	drawcalls: {
 		get: function () {
-			console.error( 'THREE.BufferGeometry: .drawcalls has been renamed to .groups.' );
+			//console.error( 'THREE.BufferGeometry: .drawcalls has been renamed to .groups.' );
 			return this.groups;
 		}
 	},
 	offsets: {
 		get: function () {
-			console.warn( 'THREE.BufferGeometry: .offsets has been renamed to .groups.' );
+			//console.warn( 'THREE.BufferGeometry: .offsets has been renamed to .groups.' );
 			return this.groups;
 		}
 	}
@@ -33391,15 +33387,15 @@ Object.defineProperties( THREE.BufferGeometry.prototype, {
 Object.defineProperties( THREE.Material.prototype, {
 	wrapAround: {
 		get: function () {
-			console.warn( 'THREE.' + this.type + ': .wrapAround has been removed.' );
+			//console.warn( 'THREE.' + this.type + ': .wrapAround has been removed.' );
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.' + this.type + ': .wrapAround has been removed.' );
+			//console.warn( 'THREE.' + this.type + ': .wrapAround has been removed.' );
 		}
 	},
 	wrapRGB: {
 		get: function () {
-			console.warn( 'THREE.' + this.type + ': .wrapRGB has been removed.' );
+			//console.warn( 'THREE.' + this.type + ': .wrapRGB has been removed.' );
 			return new THREE.Color();
 		}
 	}
@@ -33408,11 +33404,11 @@ Object.defineProperties( THREE.Material.prototype, {
 Object.defineProperties( THREE.MeshPhongMaterial.prototype, {
 	metal: {
 		get: function () {
-			console.warn( 'THREE.MeshPhongMaterial: .metal has been removed. Use THREE.MeshStandardMaterial instead.' );
+			//console.warn( 'THREE.MeshPhongMaterial: .metal has been removed. Use THREE.MeshStandardMaterial instead.' );
 			return false;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.MeshPhongMaterial: .metal has been removed. Use THREE.MeshStandardMaterial instead' );
+			//console.warn( 'THREE.MeshPhongMaterial: .metal has been removed. Use THREE.MeshStandardMaterial instead' );
 		}
 	}
 } );
@@ -33420,11 +33416,11 @@ Object.defineProperties( THREE.MeshPhongMaterial.prototype, {
 Object.defineProperties( THREE.ShaderMaterial.prototype, {
 	derivatives: {
 		get: function () {
-			console.warn( 'THREE.ShaderMaterial: .derivatives has been moved to .extensions.derivatives.' );
+			//console.warn( 'THREE.ShaderMaterial: .derivatives has been moved to .extensions.derivatives.' );
 			return this.extensions.derivatives;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE. ShaderMaterial: .derivatives has been moved to .extensions.derivatives.' );
+			//console.warn( 'THREE. ShaderMaterial: .derivatives has been moved to .extensions.derivatives.' );
 			this.extensions.derivatives = value;
 		}
 	}
@@ -33440,8 +33436,7 @@ THREE.EventDispatcher.prototype = Object.assign( Object.create( {
 
 	apply: function ( target ) {
 
-		console.warn( "THREE.EventDispatcher: .apply is deprecated, " +
-				"just inherit or Object.assign the prototype to mix-in." );
+		//console.warn( "THREE.EventDispatcher: .apply is deprecated, " + "just inherit or Object.assign the prototype to mix-in." );
 
 		Object.assign( target, this );
 
@@ -33453,51 +33448,51 @@ THREE.EventDispatcher.prototype = Object.assign( Object.create( {
 
 Object.assign( THREE.WebGLRenderer.prototype, {
 	supportsFloatTextures: function () {
-		console.warn( 'THREE.WebGLRenderer: .supportsFloatTextures() is now .extensions.get( \'OES_texture_float\' ).' );
+		//console.warn( 'THREE.WebGLRenderer: .supportsFloatTextures() is now .extensions.get( \'OES_texture_float\' ).' );
 		return this.extensions.get( 'OES_texture_float' );
 	},
 	supportsHalfFloatTextures: function () {
-		console.warn( 'THREE.WebGLRenderer: .supportsHalfFloatTextures() is now .extensions.get( \'OES_texture_half_float\' ).' );
+		////console.warn( 'THREE.WebGLRenderer: .supportsHalfFloatTextures() is now .extensions.get( \'OES_texture_half_float\' ).' );
 		return this.extensions.get( 'OES_texture_half_float' );
 	},
 	supportsStandardDerivatives: function () {
-		console.warn( 'THREE.WebGLRenderer: .supportsStandardDerivatives() is now .extensions.get( \'OES_standard_derivatives\' ).' );
+		//console.warn( 'THREE.WebGLRenderer: .supportsStandardDerivatives() is now .extensions.get( \'OES_standard_derivatives\' ).' );
 		return this.extensions.get( 'OES_standard_derivatives' );
 	},
 	supportsCompressedTextureS3TC: function () {
-		console.warn( 'THREE.WebGLRenderer: .supportsCompressedTextureS3TC() is now .extensions.get( \'WEBGL_compressed_texture_s3tc\' ).' );
+		//console.warn( 'THREE.WebGLRenderer: .supportsCompressedTextureS3TC() is now .extensions.get( \'WEBGL_compressed_texture_s3tc\' ).' );
 		return this.extensions.get( 'WEBGL_compressed_texture_s3tc' );
 	},
 	supportsCompressedTexturePVRTC: function () {
-		console.warn( 'THREE.WebGLRenderer: .supportsCompressedTexturePVRTC() is now .extensions.get( \'WEBGL_compressed_texture_pvrtc\' ).' );
+		//console.warn( 'THREE.WebGLRenderer: .supportsCompressedTexturePVRTC() is now .extensions.get( \'WEBGL_compressed_texture_pvrtc\' ).' );
 		return this.extensions.get( 'WEBGL_compressed_texture_pvrtc' );
 	},
 	supportsBlendMinMax: function () {
-		console.warn( 'THREE.WebGLRenderer: .supportsBlendMinMax() is now .extensions.get( \'EXT_blend_minmax\' ).' );
+		//console.warn( 'THREE.WebGLRenderer: .supportsBlendMinMax() is now .extensions.get( \'EXT_blend_minmax\' ).' );
 		return this.extensions.get( 'EXT_blend_minmax' );
 	},
 	supportsVertexTextures: function () {
 		return this.capabilities.vertexTextures;
 	},
 	supportsInstancedArrays: function () {
-		console.warn( 'THREE.WebGLRenderer: .supportsInstancedArrays() is now .extensions.get( \'ANGLE_instanced_arrays\' ).' );
+		//console.warn( 'THREE.WebGLRenderer: .supportsInstancedArrays() is now .extensions.get( \'ANGLE_instanced_arrays\' ).' );
 		return this.extensions.get( 'ANGLE_instanced_arrays' );
 	},
 	enableScissorTest: function ( boolean ) {
-		console.warn( 'THREE.WebGLRenderer: .enableScissorTest() is now .setScissorTest().' );
+		//console.warn( 'THREE.WebGLRenderer: .enableScissorTest() is now .setScissorTest().' );
 		this.setScissorTest( boolean );
 	},
 	initMaterial: function () {
-		console.warn( 'THREE.WebGLRenderer: .initMaterial() has been removed.' );
+		//console.warn( 'THREE.WebGLRenderer: .initMaterial() has been removed.' );
 	},
 	addPrePlugin: function () {
-		console.warn( 'THREE.WebGLRenderer: .addPrePlugin() has been removed.' );
+		//console.warn( 'THREE.WebGLRenderer: .addPrePlugin() has been removed.' );
 	},
 	addPostPlugin: function () {
-		console.warn( 'THREE.WebGLRenderer: .addPostPlugin() has been removed.' );
+		//console.warn( 'THREE.WebGLRenderer: .addPostPlugin() has been removed.' );
 	},
 	updateShadowMap: function () {
-		console.warn( 'THREE.WebGLRenderer: .updateShadowMap() has been removed.' );
+		//console.warn( 'THREE.WebGLRenderer: .updateShadowMap() has been removed.' );
 	}
 } );
 
@@ -33507,7 +33502,7 @@ Object.defineProperties( THREE.WebGLRenderer.prototype, {
 			return this.shadowMap.enabled;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderer: .shadowMapEnabled is now .shadowMap.enabled.' );
+			//console.warn( 'THREE.WebGLRenderer: .shadowMapEnabled is now .shadowMap.enabled.' );
 			this.shadowMap.enabled = value;
 		}
 	},
@@ -33516,7 +33511,7 @@ Object.defineProperties( THREE.WebGLRenderer.prototype, {
 			return this.shadowMap.type;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderer: .shadowMapType is now .shadowMap.type.' );
+			//console.warn( 'THREE.WebGLRenderer: .shadowMapType is now .shadowMap.type.' );
 			this.shadowMap.type = value;
 		}
 	},
@@ -33525,7 +33520,7 @@ Object.defineProperties( THREE.WebGLRenderer.prototype, {
 			return this.shadowMap.cullFace;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderer: .shadowMapCullFace is now .shadowMap.cullFace.' );
+			//console.warn( 'THREE.WebGLRenderer: .shadowMapCullFace is now .shadowMap.cullFace.' );
 			this.shadowMap.cullFace = value;
 		}
 	}
@@ -33538,7 +33533,7 @@ Object.defineProperties( THREE.WebGLShadowMap.prototype, {
 		},
 		set: function ( cullFace ) {
 			var value = ( cullFace !== THREE.CullFaceBack );
-			console.warn( "WebGLRenderer: .shadowMap.cullFace is deprecated. Set .shadowMap.renderReverseSided to " + value + "." );
+			//console.warn( "WebGLRenderer: .shadowMap.cullFace is deprecated. Set .shadowMap.renderReverseSided to " + value + "." );
 			this.renderReverseSided = value;
 		}
 	}
@@ -33549,101 +33544,101 @@ Object.defineProperties( THREE.WebGLShadowMap.prototype, {
 Object.defineProperties( THREE.WebGLRenderTarget.prototype, {
 	wrapS: {
 		get: function () {
-			console.warn( 'THREE.WebGLRenderTarget: .wrapS is now .texture.wrapS.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .wrapS is now .texture.wrapS.' );
 			return this.texture.wrapS;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderTarget: .wrapS is now .texture.wrapS.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .wrapS is now .texture.wrapS.' );
 			this.texture.wrapS = value;
 		}
 	},
 	wrapT: {
 		get: function () {
-			console.warn( 'THREE.WebGLRenderTarget: .wrapT is now .texture.wrapT.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .wrapT is now .texture.wrapT.' );
 			return this.texture.wrapT;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderTarget: .wrapT is now .texture.wrapT.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .wrapT is now .texture.wrapT.' );
 			this.texture.wrapT = value;
 		}
 	},
 	magFilter: {
 		get: function () {
-			console.warn( 'THREE.WebGLRenderTarget: .magFilter is now .texture.magFilter.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .magFilter is now .texture.magFilter.' );
 			return this.texture.magFilter;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderTarget: .magFilter is now .texture.magFilter.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .magFilter is now .texture.magFilter.' );
 			this.texture.magFilter = value;
 		}
 	},
 	minFilter: {
 		get: function () {
-			console.warn( 'THREE.WebGLRenderTarget: .minFilter is now .texture.minFilter.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .minFilter is now .texture.minFilter.' );
 			return this.texture.minFilter;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderTarget: .minFilter is now .texture.minFilter.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .minFilter is now .texture.minFilter.' );
 			this.texture.minFilter = value;
 		}
 	},
 	anisotropy: {
 		get: function () {
-			console.warn( 'THREE.WebGLRenderTarget: .anisotropy is now .texture.anisotropy.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .anisotropy is now .texture.anisotropy.' );
 			return this.texture.anisotropy;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderTarget: .anisotropy is now .texture.anisotropy.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .anisotropy is now .texture.anisotropy.' );
 			this.texture.anisotropy = value;
 		}
 	},
 	offset: {
 		get: function () {
-			console.warn( 'THREE.WebGLRenderTarget: .offset is now .texture.offset.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .offset is now .texture.offset.' );
 			return this.texture.offset;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderTarget: .offset is now .texture.offset.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .offset is now .texture.offset.' );
 			this.texture.offset = value;
 		}
 	},
 	repeat: {
 		get: function () {
-			console.warn( 'THREE.WebGLRenderTarget: .repeat is now .texture.repeat.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .repeat is now .texture.repeat.' );
 			return this.texture.repeat;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderTarget: .repeat is now .texture.repeat.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .repeat is now .texture.repeat.' );
 			this.texture.repeat = value;
 		}
 	},
 	format: {
 		get: function () {
-			console.warn( 'THREE.WebGLRenderTarget: .format is now .texture.format.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .format is now .texture.format.' );
 			return this.texture.format;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderTarget: .format is now .texture.format.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .format is now .texture.format.' );
 			this.texture.format = value;
 		}
 	},
 	type: {
 		get: function () {
-			console.warn( 'THREE.WebGLRenderTarget: .type is now .texture.type.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .type is now .texture.type.' );
 			return this.texture.type;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderTarget: .type is now .texture.type.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .type is now .texture.type.' );
 			this.texture.type = value;
 		}
 	},
 	generateMipmaps: {
 		get: function () {
-			console.warn( 'THREE.WebGLRenderTarget: .generateMipmaps is now .texture.generateMipmaps.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .generateMipmaps is now .texture.generateMipmaps.' );
 			return this.texture.generateMipmaps;
 		},
 		set: function ( value ) {
-			console.warn( 'THREE.WebGLRenderTarget: .generateMipmaps is now .texture.generateMipmaps.' );
+			//console.warn( 'THREE.WebGLRenderTarget: .generateMipmaps is now .texture.generateMipmaps.' );
 			this.texture.generateMipmaps = value;
 		}
 	}
@@ -33653,7 +33648,7 @@ Object.defineProperties( THREE.WebGLRenderTarget.prototype, {
 
 Object.assign( THREE.Audio.prototype, {
 	load: function ( file ) {
-		console.warn( 'THREE.Audio: .load has been deprecated. Please use THREE.AudioLoader.' );
+		//console.warn( 'THREE.Audio: .load has been deprecated. Please use THREE.AudioLoader.' );
 		var scope = this;
 		var audioLoader = new THREE.AudioLoader();
 		audioLoader.load( file, function ( buffer ) {
@@ -33665,7 +33660,7 @@ Object.assign( THREE.Audio.prototype, {
 
 Object.assign( THREE.AudioAnalyser.prototype, {
 	getData: function ( file ) {
-		console.warn( 'THREE.AudioAnalyser: .getData() is now .getFrequencyData().' );
+		//console.warn( 'THREE.AudioAnalyser: .getData() is now .getFrequencyData().' );
 		return this.getFrequencyData();
 	}
 } );
@@ -33676,7 +33671,7 @@ THREE.GeometryUtils = {
 
 	merge: function ( geometry1, geometry2, materialIndexOffset ) {
 
-		console.warn( 'THREE.GeometryUtils: .merge() has been moved to Geometry. Use geometry.merge( geometry2, matrix, materialIndexOffset ) instead.' );
+		//console.warn( 'THREE.GeometryUtils: .merge() has been moved to Geometry. Use geometry.merge( geometry2, matrix, materialIndexOffset ) instead.' );
 
 		var matrix;
 
@@ -33695,7 +33690,7 @@ THREE.GeometryUtils = {
 
 	center: function ( geometry ) {
 
-		console.warn( 'THREE.GeometryUtils: .center() has been moved to Geometry. Use geometry.center() instead.' );
+		//console.warn( 'THREE.GeometryUtils: .center() has been moved to Geometry. Use geometry.center() instead.' );
 		return geometry.center();
 
 	}
@@ -33708,7 +33703,7 @@ THREE.ImageUtils = {
 
 	loadTexture: function ( url, mapping, onLoad, onError ) {
 
-		console.warn( 'THREE.ImageUtils.loadTexture has been deprecated. Use THREE.TextureLoader() instead.' );
+		//console.warn( 'THREE.ImageUtils.loadTexture has been deprecated. Use THREE.TextureLoader() instead.' );
 
 		var loader = new THREE.TextureLoader();
 		loader.setCrossOrigin( this.crossOrigin );
@@ -33723,7 +33718,7 @@ THREE.ImageUtils = {
 
 	loadTextureCube: function ( urls, mapping, onLoad, onError ) {
 
-		console.warn( 'THREE.ImageUtils.loadTextureCube has been deprecated. Use THREE.CubeTextureLoader() instead.' );
+		//console.warn( 'THREE.ImageUtils.loadTextureCube has been deprecated. Use THREE.CubeTextureLoader() instead.' );
 
 		var loader = new THREE.CubeTextureLoader();
 		loader.setCrossOrigin( this.crossOrigin );
@@ -33738,13 +33733,13 @@ THREE.ImageUtils = {
 
 	loadCompressedTexture: function () {
 
-		console.error( 'THREE.ImageUtils.loadCompressedTexture has been removed. Use THREE.DDSLoader instead.' );
+		//console.error( 'THREE.ImageUtils.loadCompressedTexture has been removed. Use THREE.DDSLoader instead.' );
 
 	},
 
 	loadCompressedTextureCube: function () {
 
-		console.error( 'THREE.ImageUtils.loadCompressedTextureCube has been removed. Use THREE.DDSLoader instead.' );
+		//console.error( 'THREE.ImageUtils.loadCompressedTextureCube has been removed. Use THREE.DDSLoader instead.' );
 
 	}
 
@@ -33754,25 +33749,25 @@ THREE.ImageUtils = {
 
 THREE.Projector = function () {
 
-	console.error( 'THREE.Projector has been moved to /examples/js/renderers/Projector.js.' );
+	//console.error( 'THREE.Projector has been moved to /examples/js/renderers/Projector.js.' );
 
 	this.projectVector = function ( vector, camera ) {
 
-		console.warn( 'THREE.Projector: .projectVector() is now vector.project().' );
+		//console.warn( 'THREE.Projector: .projectVector() is now vector.project().' );
 		vector.project( camera );
 
 	};
 
 	this.unprojectVector = function ( vector, camera ) {
 
-		console.warn( 'THREE.Projector: .unprojectVector() is now vector.unproject().' );
+		//console.warn( 'THREE.Projector: .unprojectVector() is now vector.unproject().' );
 		vector.unproject( camera );
 
 	};
 
 	this.pickingRay = function ( vector, camera ) {
 
-		console.error( 'THREE.Projector: .pickingRay() is now raycaster.setFromCamera().' );
+		//console.error( 'THREE.Projector: .pickingRay() is now raycaster.setFromCamera().' );
 
 	};
 
@@ -33782,7 +33777,7 @@ THREE.Projector = function () {
 
 THREE.CanvasRenderer = function () {
 
-	console.error( 'THREE.CanvasRenderer has been moved to /examples/js/renderers/CanvasRenderer.js' );
+	//console.error( 'THREE.CanvasRenderer has been moved to /examples/js/renderers/CanvasRenderer.js' );
 
 	this.domElement = document.createElementNS( 'http://www.w3.org/1999/xhtml', 'canvas' );
 	this.clear = function () {};
@@ -34023,7 +34018,7 @@ THREE.ShapeUtils = {
 					//throw ( "Warning, unable to triangulate polygon!" );
 					//return null;
 					// Sometimes warning is fine, especially polygons are triangulated in reverse.
-					console.warn( 'THREE.ShapeUtils: Unable to triangulate polygon! in triangulate()' );
+					//console.warn( 'THREE.ShapeUtils: Unable to triangulate polygon! in triangulate()' );
 
 					if ( indices ) return vertIndices;
 					return result;
@@ -34304,7 +34299,7 @@ THREE.ShapeUtils = {
 				// angle != 180 deg.
 
 				var other2toAngle		= otherPtX * legToPtY - otherPtY * legToPtX;
-				// console.log( "from2to: " + from2toAngle + ", from2other: " + from2otherAngle + ", other2to: " + other2toAngle );
+				// //console.log( "from2to: " + from2toAngle + ", from2other: " + from2otherAngle + ", other2to: " + other2toAngle );
 
 				if ( from2toAngle > 0 ) {
 
@@ -34321,7 +34316,7 @@ THREE.ShapeUtils = {
 			} else {
 
 				// angle == 180 deg.
-				// console.log( "from2to: 180 deg., from2other: " + from2otherAngle  );
+				// //console.log( "from2to: 180 deg., from2other: " + from2otherAngle  );
 				return	( from2otherAngle > 0 );
 
 			}
@@ -34432,7 +34427,7 @@ THREE.ShapeUtils = {
 				counter --;
 				if ( counter < 0 ) {
 
-					console.log( "Infinite Loop! Holes left:" + indepHoles.length + ", Probably Hole outside Shape!" );
+					//console.log( "Infinite Loop! Holes left:" + indepHoles.length + ", Probably Hole outside Shape!" );
 					break;
 
 				}
@@ -34519,7 +34514,7 @@ THREE.ShapeUtils = {
 
 			if ( allPointsMap[ key ] !== undefined ) {
 
-				console.warn( "THREE.Shape: Duplicate point", key );
+				//console.warn( "THREE.Shape: Duplicate point", key );
 
 			}
 
@@ -34690,7 +34685,7 @@ THREE.Curve.prototype = {
 
 	getPoint: function ( t ) {
 
-		console.warn( "THREE.Curve: Warning, getPoint() not implemented!" );
+		//console.warn( "THREE.Curve: Warning, getPoint() not implemented!" );
 		return null;
 
 	},
@@ -36403,7 +36398,7 @@ THREE.SplineCurve3 = THREE.Curve.create(
 
 	function ( points /* array of Vector3 */ ) {
 
-		console.warn( 'THREE.SplineCurve3 will be deprecated. Please use THREE.CatmullRomCurve3' );
+		//console.warn( 'THREE.SplineCurve3 will be deprecated. Please use THREE.CatmullRomCurve3' );
 		this.points = ( points == undefined ) ? [] : points;
 
 	},
@@ -36532,7 +36527,7 @@ THREE.CatmullRomCurve3 = ( function() {
 
 			l = points.length;
 
-			if ( l < 2 ) console.log( 'duh, you need at least 2 points' );
+			if ( l < 2 ) console.log( '' );
 
 			point = ( l - ( this.closed ? 0 : 1 ) ) * t;
 			intPoint = Math.floor( point );
@@ -36627,7 +36622,7 @@ THREE.CatmullRomCurve3 = ( function() {
 
 THREE.ClosedSplineCurve3 = function ( points ) {
 
-	console.warn( 'THREE.ClosedSplineCurve3 has been deprecated. Please use THREE.CatmullRomCurve3.' );
+	//console.warn( 'THREE.ClosedSplineCurve3 has been deprecated. Please use THREE.CatmullRomCurve3.' );
 
 	THREE.CatmullRomCurve3.call( this, points );
 	this.type = 'catmullrom';
@@ -37660,7 +37655,7 @@ THREE.ExtrudeGeometry.prototype.addShape = function ( shape, options ) {
 
 	function scalePt2 ( pt, vec, size ) {
 
-		if ( ! vec ) console.error( "THREE.ExtrudeGeometry: vec does not exist" );
+		if ( ! vec ) console.error( "" );
 
 		return vec.clone().multiplyScalar( size ).add( pt );
 
@@ -38957,7 +38952,7 @@ THREE.TextGeometry = function ( text, parameters ) {
 
 	if ( font instanceof THREE.Font === false ) {
 
-		console.error( 'THREE.TextGeometry: font parameter is not an instance of THREE.Font.' );
+		//console.error( 'THREE.TextGeometry: font parameter is not an instance of THREE.Font.' );
 		return new THREE.Geometry();
 
 	}
@@ -39329,7 +39324,7 @@ THREE.TorusKnotGeometry = function ( radius, tube, tubularSegments, radialSegmen
 		q: q
 	};
 
-	if( heightScale !== undefined ) console.warn( 'THREE.TorusKnotGeometry: heightScale has been deprecated. Use .scale( x, y, z ) instead.' );
+	//if( heightScale !== undefined ) console.warn( 'THREE.TorusKnotGeometry: heightScale has been deprecated. Use .scale( x, y, z ) instead.' );
 
 	this.fromBufferGeometry( new THREE.TorusKnotBufferGeometry( radius, tube, tubularSegments, radialSegments, p, q ) );
 	this.mergeVertices();
@@ -40914,7 +40909,7 @@ THREE.FaceNormalsHelper = function ( object, size, hex, linewidth ) {
 
 	} else {
 
-		console.warn( 'THREE.FaceNormalsHelper: only THREE.Geometry is supported. Use THREE.VertexNormalsHelper, instead.' );
+		//console.warn( 'THREE.FaceNormalsHelper: only THREE.Geometry is supported. Use THREE.VertexNormalsHelper, instead.' );
 
 	}
 
@@ -41039,7 +41034,7 @@ THREE.GridHelper.prototype.constructor = THREE.GridHelper;
 
 THREE.GridHelper.prototype.setColors = function () {
 
-	console.error( 'THREE.GridHelper: setColors() has been deprecated, pass them in the constructor instead.' );
+	//console.error( 'THREE.GridHelper: setColors() has been deprecated, pass them in the constructor instead.' );
 
 };
 
@@ -41779,7 +41774,7 @@ THREE.MorphBlendMesh.prototype.playAnimation = function ( name ) {
 
 	} else {
 
-		console.warn( "THREE.MorphBlendMesh: animation[" + name + "] undefined in .playAnimation()" );
+		//console.warn( "THREE.MorphBlendMesh: animation[" + name + "] undefined in .playAnimation()" );
 
 	}
 
