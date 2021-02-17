@@ -253,14 +253,14 @@ var TwoTexturesMoreLightTest = function(vertices, indices, texCoords, normals, t
   this.begin = function(canvas, cb) {
     this.canvas = canvas;
     this.cb = cb;
-    var root = 'static/twoTexturesMoreLight/'
-    loadTextResource(root + 'shader.vs.glsl', function(vsErr, vsText, self) {
+    var root = 'static/assets/'
+    loadTextResource(root + 'shader_2_tex.vs.glsl', function(vsErr, vsText, self) {
       if (vsErr) {
         alert('Fatal error getting vertex shader (see console)');
         console.error(vsErr);
       } else {
         loadTextResource(
-            root + 'shader.fs.glsl', function(fsErr, fsText, self) {
+            root + 'shader_2_tex.fs.glsl', function(fsErr, fsText, self) {
               if (fsErr) {
                 alert('Fatal error getting fragment shader (see console)');
                 console.error(fsErr);

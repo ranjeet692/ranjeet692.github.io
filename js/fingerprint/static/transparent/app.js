@@ -237,13 +237,13 @@ var TransparentTest = function (vertices, indices, texCoords, normals, texture) 
         this.canvas = canvas;
         this.cb = cb;
         this.level = level;
-        var root = 'static/transparent/'
-        loadTextResource(root + 'shader.vs.glsl', function (vsErr, vsText, self) {
+        var root = 'static/assets/'
+        loadTextResource(root + 'shader_trans.vs.glsl', function (vsErr, vsText, self) {
             if (vsErr) {
                 alert('Fatal error getting vertex shader (see console)');
                 console.error(vsErr);
             } else {
-                loadTextResource(root + 'shader.fs.glsl', function (fsErr, fsText, self) {
+                loadTextResource(root + 'shader_trans.fs.glsl', function (fsErr, fsText, self) {
                     if (fsErr) {
                         alert('Fatal error getting fragment shader (see console)');
                         console.error(fsErr);
