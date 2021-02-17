@@ -11,7 +11,7 @@ root = exports ? this
 
 root.CompressedTextureTest = class CompressedTextureTest
 
-  textureRoot = 'static/three/textures/compressed'
+  textureRoot = 'static/assets'
   geometry = new THREE.BoxGeometry(150, 150, 150)
   startX = -400
   xStop = Math.abs startX

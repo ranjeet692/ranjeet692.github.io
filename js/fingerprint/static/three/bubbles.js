@@ -28,7 +28,7 @@ var BubbleTest = function() {
 
     //
 
-    var path = "static/three/textures/cube/Park2/";
+    var path = "static/assets/";
     var format = '.jpg';
     var urls = [
       path + 'posx' + format, path + 'negx' + format, path + 'posy' + format,

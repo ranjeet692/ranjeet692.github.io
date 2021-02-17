@@ -99,7 +99,7 @@ var LightingTest = function() {
 
     var textureLoader = new THREE.TextureLoader();
 
-    var texture = textureLoader.load("static/three/textures/color.png");
+    var texture = textureLoader.load("static/assets/color_3_tex.png");
     texture.repeat.set(20, 10);
     texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
     texture.format = THREE.RGBFormat;

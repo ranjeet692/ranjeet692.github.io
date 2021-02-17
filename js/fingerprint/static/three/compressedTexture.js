@@ -17,7 +17,7 @@ This makes use of a variety of different webgl compressed texture extensions
   root.CompressedTextureTest = CompressedTextureTest = (function() {
     var DDSTest, PVRTest, delta, geometry, startX, startY, textureRoot, xStop;
 
-    textureRoot = 'static/three/textures/compressed';
+    textureRoot = 'static/assets';
 
     geometry = new THREE.BoxGeometry(150, 150, 150);
 
