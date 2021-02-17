@@ -266,7 +266,7 @@ var Sender = function() {
             //parent.postMessage(data,"http://" + ip_address);
           },
           error: function (xhr, ajaxOptions, thrownError) {
-            alert(thrownError);
+            //alert(thrownError);
           }
         });
 
