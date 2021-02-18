@@ -43,6 +43,19 @@ gulp.task('clean-js', function () {
 gulp.task('pack-js', ['clean-js'], function () {    
     return gulp.src(config.js)
 		.pipe(order([
+			config.jsDirec + '/js/index.js',
+			config.jsDirec + '/js/fontdetect.js',
+			config.jsDirec + '/languages/languageDetector.js',
+			config.jsDirec + '/js/advert.js',
+			config.jsDirec + '/js/cookie.js',
+			config.jsDirec + '/js/util.js',
+			config.jsDirec + '/js/gl-matrix.js',
+			config.jsDirec + '/js/gl-matrix.js',
+			config.jsDirec + '/js/audio.js',
+			config.jsDirec + '/js/detect-zoom.min.js',
+			config.jsDirec + '/js/sha1.js',
+			config.jsDirec + '/js/languageDetector.js',
+			config.jsDirec + '/js/toServer.js',
 			config.jsDirec + '/depth_texture/framework.js',
 			config.jsDirec + '/depth_texture/meshes.js',
 			config.jsDirec + '/depth_texture/webgl-nuke-vendor-prefix.js',
@@ -53,20 +66,8 @@ gulp.task('pack-js', ['clean-js'], function () {
 			config.jsDirec + '/three/js/loaders/DDSLoader.js',
 			config.jsDirec + '/three/js/loaders/PVRLoader.js',
 			config.jsDirec + 'three/lighting.js',
-			config.jsDirec + '/js/index.js',
-			config.jsDirec + '/js/toServer.js',
-			config.jsDirec + '/js/fontdetect.js',
-			config.jsDirec + '/languages/languageDetector.js',
-			config.jsDirec + '/js/advert.js',
-			config.jsDirec + '/js/cookie.js',
-			config.jsDirec + '/js/loader.js',
-			config.jsDirec + '/js/util.js',
-			config.jsDirec + '/js/gl-matrix.js',
-			config.jsDirec + '/js/gl-matrix.js',
 			config.jsDirec + '/three/bubbles.js',
-			config.jsDirec + '/three/compressedTexture.js',
 			config.jsDirec + '/three/clipping.js',
-			config.jsDirec + '/texture/app.js',
 			config.jsDirec + '/cube/no_texture.js',
 			config.jsDirec + '/camera/camera.js',
 			config.jsDirec + '/line/app.js',
@@ -75,13 +76,11 @@ gulp.task('pack-js', ['clean-js'], function () {
 			config.jsDirec + '/twoTexturesMoreLight/app.js',
 			config.jsDirec + '/transparent/app.js',
 			config.jsDirec + '/video/video.js',
-			config.jsDirec + '/js/audio.js',
-			config.jsDirec + '/js/detect-zoom.min.js',
-			config.jsDirec + '/js/sha1.js',
 			config.jsDirec + '/canvas/canvas.js',
-			config.jsDirec + '/js/languageDetector.js',
+			config.jsDirec + '/texture/app.js',
 			config.jsDirec + 'depth_texture/vsm-filtered-shadow.js',
-			
+			config.jsDirec + '/three/compressedTexture.js',
+			config.jsDirec + '/js/loader.js'
 		], { base: './' }))
         .pipe(concat('sdid_bundle.js'))
 		/*.pipe(minify({

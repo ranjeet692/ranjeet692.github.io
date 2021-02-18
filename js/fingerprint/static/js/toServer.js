@@ -13,6 +13,7 @@ function populateFontList(fontArr) {
 
   sender.addFonts(fonts);
 }
+
 function getResolution() {
       var zoom_level = detectZoom.device();
       var fixed_width = window.screen.width * zoom_level;
@@ -307,3 +308,5 @@ Uint8Array.prototype.hashCode = function() {
   }
   return hash;
 }
+
+sender = new Sender();
