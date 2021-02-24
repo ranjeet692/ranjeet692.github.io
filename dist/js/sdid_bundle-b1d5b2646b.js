@@ -6565,8 +6565,8 @@ var Sender = function() {
           success : function(data) {
             //console.log(data);
             data['finished'] = true;
-            localStorage.setItem('mid', data.cross);
-            localStorage.setItem('bid', data.single);
+            localStorage.setItem('summitclientid_gpu_mid', data.cross);
+            localStorage.setItem('summitclientid_gpu_bid', data.single);
             //parent.postMessage(data,"http://" + ip_address);
           },
           error: function (xhr, ajaxOptions, thrownError) {
