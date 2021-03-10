@@ -5,8 +5,7 @@ var sdk = {
     getId : function(callback) {
         var name = 'SummitClientId';
         var hub = 'https://idstatic.summitmedia-digital.com/project/user-session-unification/1.0/html/hub.html';
-        var fallbackId = function(id) {
-            var cid = '';
+        var cid = '';
             var crypto = self.crypto || self.msCrypto;
             if (crypto) {
                 var csize = 24;
@@ -18,18 +17,6 @@ var sdk = {
 		    console.log('scid :: ' + cid);
             }
             return cid || id;
-        };
-        var publishId = function(id) {
-            var lskey = 'summitclientid_id1';
-            try {
-                if (w.localStorage.getItem(lskey) !== id) {
-                    w.localStorage.setItem(lskey, id);
-                }
-            } catch (e) {}
-            if (typeof callback === 'function') {
-                callback(id);
-            }
-        };
     }
 }
 
