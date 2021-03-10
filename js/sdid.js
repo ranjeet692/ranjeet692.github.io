@@ -30,22 +30,6 @@ var sdk = {
                 callback(id);
             }
         };
-        var storage = new CrossStorageClient(hub);
-        var onConnect = storage.onConnect();
-        var onRetrieve = onConnect.then(function() {
-            return storage.get(name);
-        });
-        onRetrieve.then(function(id) {
-            if (id) {
-                publishId(id);
-                console.log(name + ': ' + id);
-            } else {
-                id = fallbackId(storage._id);
-                storage.set(name, id);
-                publishId(id);
-                console.log('New ' + name + ': ' + id);
-            }
-        });
     }
 }
 
