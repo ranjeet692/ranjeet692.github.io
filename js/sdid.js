@@ -1,52 +1,46 @@
-(function (scope) {
-	'use strict';
+!function(d, w){
+"use strict";
 
-	var SdidJS = function(url) {
-		this._mid = '';
-		this._bid = '';
-		return this;
-	};
+var sdk = {
+    getId : function(callback) {
+        var name = 'SummitClientId';
+        var hub = 'https://idstatic.summitmedia-digital.com/project/user-session-unification/1.0/html/hub.html';
+        var cid = '';
+            var crypto = self.crypto || self.msCrypto;
+            if (crypto) {
+                var csize = 24;
+                var calpha = '0123456789-ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz';
+                var cbytes = crypto.getRandomValues(new Uint8Array(csize));
+                while (0 < csize--) {
+                    cid += calpha[cbytes[csize] & 63];
+                }
+		    console.log('scid :: ' + cid);
+            }
+            return cid || id;
+    }
+}
 
-	SdidJS.prototype = {
-		generate: function() {
-			//checkLocalStorage
-			if (localStorage.getItem('mid')) {
-				this._mid = localStorage.getItem('mid');
-				this._bid = localStorage.getItem('bid');
-			} else {
-				this.forceGenerate();
-			}
-		},
+var summitclientid = {
+    id1: null,
+    get: function (callback, retry=0) {
+        if (summitclientid.id1 !== null) {
+            callback(summitclientid.id1);
+        } else {
+            retry++;
+            if (retry > 0 && retry <= 15) {
+                setTimeout(function (){ summitclientid.get(callback, retry); }, retry * 500);
+            }
+        }
+    }
+}
 
-		forceGenerate: function() {
-			var _cframe = document.createElement("iframe");
-			_cframe.setAttribute('width', "0");
-			_cframe.setAttribute('height', "0");
-			_cframe.setAttribute('src', "js/fingerprint/index.html");
-			_cframe.setAttribute('frameborder', "0");
-			_cframe.setAttribute('scrolling', 'no');
-			_cframe.setAttribute('style', 'width:0; height:0; border:0; border:none;');
-			document.body.appendChild(_cframe);
-		},
+sdk.getId(function (id) {
+   summitclientid.id1 = id;  
+});
 
-		getMid: function() {
-			if (!this._mid) {
-				this.generate();
-			}
-			return this._mid;
-		},
+if (typeof w.summitclientid === 'undefined') {
+    w.summitclientid = summitclientid;
+}
 
-		getBid: function() {
-			if (!this._bid) {
-				this.generate();	
-			}
-			return this._bid;
-		}
-	};
+}(document, window);
 
-	if (typeof module === 'object' && typeof exports !== "undefined") {
-		module.exports = SdidJS;
-	}
-	scope.SdidJS = SdidJS;
-
-})(window);  
