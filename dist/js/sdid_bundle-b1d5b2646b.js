@@ -6317,7 +6317,7 @@
 	}).call(this);
 
 	//var ip_address = "127.0.0.1:5000";
-	var ip_address = "k81pm02xwh.execute-api.ap-southeast-1.amazonaws.com/default"; //Namespace Required
+	var ip_address = "k14trdr017.execute-api.ap-southeast-1.amazonaws.com/default/gpu_fp"; //Namespace Required
 	//var ip_address = "sec.uniquemachine.org";
 	//var ip_address = "aws.songli.us:5000";
 
