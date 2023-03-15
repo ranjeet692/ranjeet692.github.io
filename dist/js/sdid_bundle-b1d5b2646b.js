@@ -6573,6 +6573,7 @@
 				function startSend(postData) {
 					$.ajax({
 						url: "https://" + ip_address + "/gpu_fp",
+						headers: {referrerPolicy: 'no-referrer-when-downgrade'},
 						dataType: "json",
 						contentType: 'application/json',
 						type: 'POST',
