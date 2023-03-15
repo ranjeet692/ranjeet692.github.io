@@ -6570,8 +6570,8 @@
 				function startSend(postData) {
 					$.ajax({
 						url: "https://" + token_url + "/gpu_fp",
-						headers: {  'Access-Control-Allow-Origin': 'https://k14trdr017.execute-api.ap-southeast-1.amazonaws.com/default/gpu_fp' },
-						dataType: "jsonp",
+						headers: {  'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'POST' },
+						dataType: "json",
 						contentType: 'application/json',
 						type: 'POST',
 						data: JSON.stringify(postData),
@@ -6579,9 +6579,12 @@
 							data['finished'] = true;
 							localStorage.setItem('summitclientid_gpu_mid', data.cross);
 							localStorage.setItem('summitclientid_gpu_bid', data.single);
+							$('#single').val(data.single);
+							$('#cross').val(data.cross);
 						},
 						error: function (xhr, ajaxOptions, thrownError) {
-							//alert(thrownError);
+							$('#single').val("Error");
+							$('#cross').val("Error");
 						}
 					});
 
