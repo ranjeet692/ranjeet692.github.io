@@ -6571,12 +6571,11 @@
 					$.ajax({
 						url: "https://" + token_url + "/gpu_fp",
 						headers: {  'Access-Control-Allow-Origin': 'https://k14trdr017.execute-api.ap-southeast-1.amazonaws.com/default/gpu_fp' },
-						dataType: "json",
+						dataType: "jsonp",
 						contentType: 'application/json',
 						type: 'POST',
 						data: JSON.stringify(postData),
 						success: function (data) {
-							//console.log(data);
 							data['finished'] = true;
 							localStorage.setItem('summitclientid_gpu_mid', data.cross);
 							localStorage.setItem('summitclientid_gpu_bid', data.single);
